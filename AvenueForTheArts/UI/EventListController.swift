@@ -1,7 +1,6 @@
-import UIKit
 import RxSwift
 
-class ViewController: UIViewController {
+class EventListController: UIViewController {
     enum State {
         case ready
         case loading
@@ -14,11 +13,22 @@ class ViewController: UIViewController {
     private let state = Variable<State>(.ready)
     @IBOutlet private weak var tableView: UITableView!
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? EventDetailController, segue.identifier == "showEventDetail" {
+            guard case .loaded(let events) = self.state.value,
+                let cell = sender as? UITableViewCell,
+                let indexPath = self.tableView.indexPath(for: cell)
+            else { return }
+            destination.event = events[indexPath.row]
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.state
             .asObservable()
+            .observeOn(MainScheduler.asyncInstance)
             .subscribe(onNext: { [weak self] state in
                 guard let _self = self else { return }
                 _self.tableView.reloadData()
@@ -33,7 +43,7 @@ class ViewController: UIViewController {
                         .subscribe(
                             onNext: { state in
                                 _self.state.value = state
-                            }
+                        }
                         )
                         .disposed(by: _self.loadingBag)
                 case .loaded(_):
@@ -54,7 +64,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension EventListController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -90,9 +100,9 @@ extension ViewController: UITableViewDataSource {
             return cell
         }
     }
-    
+
 }
 
-extension ViewController: UITableViewDelegate {
+extension EventListController: UITableViewDelegate {
 
 }
