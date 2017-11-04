@@ -17,14 +17,14 @@
             <objects>
                 <viewController id="WaH-nQ-Ahg" customClass="EventDetailController" customModule="AvenueForTheArts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dFD-kq-qAR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeQ-cP-xj0">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Csf-vY-nRZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="578.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="834"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y4e-Ei-pPN">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
@@ -55,6 +55,31 @@
                                                     </textView>
                                                 </subviews>
                                             </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6M-k8-bBy">
+                                                <rect key="frame" x="0.0" y="578.5" width="375" height="255.5"/>
+                                                <subviews>
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLy-nM-eIa">
+                                                        <rect key="frame" x="8" y="8" width="359" height="239.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="wLy-nM-eIa" secondAttribute="height" multiplier="3:2" id="B0B-RI-hXd"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="16"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </mapView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="wLy-nM-eIa" firstAttribute="leading" secondItem="U6M-k8-bBy" secondAttribute="leadingMargin" id="Pg6-tz-544"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="wLy-nM-eIa" secondAttribute="trailing" id="Slu-Uh-dwb"/>
+                                                    <constraint firstAttribute="bottomMargin" secondItem="wLy-nM-eIa" secondAttribute="bottom" id="aGT-fZ-bGE"/>
+                                                    <constraint firstItem="wLy-nM-eIa" firstAttribute="top" secondItem="U6M-k8-bBy" secondAttribute="topMargin" id="kNM-8s-hf4"/>
+                                                </constraints>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -78,9 +103,11 @@
                         <viewLayoutGuide key="safeArea" id="Q7k-Xa-Iob"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="gYC-E4-GY5"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="banner" destination="y4e-Ei-pPN" id="QWg-eZ-3bd"/>
                         <outlet property="descriptionView" destination="tq2-Vl-HB2" id="DIL-9N-34l"/>
+                        <outlet property="mapView" destination="wLy-nM-eIa" id="dHd-TM-R9b"/>
                         <outlet property="name" destination="S9y-5y-FFK" id="IgF-F3-hS7"/>
                     </connections>
                 </viewController>

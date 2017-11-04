@@ -31,6 +31,7 @@
 		316AE11F1FAE38070013260D /* EventListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316AE11E1FAE38070013260D /* EventListCell.xib */; };
 		316AE1241FAE3E520013260D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 316AE1261FAE3E520013260D /* Localizable.strings */; };
 		316AE1291FAE756A0013260D /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 316AE1281FAE756A0013260D /* AppIcon.xcassets */; };
+		316AE12B1FAE802E0013260D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316AE12A1FAE802E0013260D /* MapKit.framework */; };
 		31A5CFAC1FAD55630050FD37 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFAB1FAD55630050FD37 /* Event.swift */; };
 		31A5CFAE1FAD556F0050FD37 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFAD1FAD556F0050FD37 /* API.swift */; };
 		31A5CFB01FAD67920050FD37 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFAF1FAD67920050FD37 /* Models.swift */; };
@@ -70,6 +71,7 @@
 		316AE1251FAE3E520013260D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		316AE1271FAE3E5C0013260D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		316AE1281FAE756A0013260D /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
+		316AE12A1FAE802E0013260D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		31A5CFAB1FAD55630050FD37 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		31A5CFAD1FAD556F0050FD37 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		31A5CFAF1FAD67920050FD37 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316AE12B1FAE802E0013260D /* MapKit.framework in Frameworks */,
 				A8A5A52D9BBF6EAC46EE4F46 /* Pods_AvenueForTheArts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +249,7 @@
 		A8B2518AEFF79FD325CBF5D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				316AE12A1FAE802E0013260D /* MapKit.framework */,
 				D28BD268B54951870B37F1A8 /* Pods_AvenueForTheArts.framework */,
 			);
 			name = Frameworks;
@@ -291,6 +295,9 @@
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
 							};
 						};
 					};
