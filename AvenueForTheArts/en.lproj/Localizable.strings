@@ -1,0 +1,5 @@
+// Loading Events List
+"load_events_message" = "Loading Events";
+"load_events_error" = "Failed to load Events";
+"load_events_retry_title" = "Retry";
+"load_events_refresh_title" = "Checking for new Events";

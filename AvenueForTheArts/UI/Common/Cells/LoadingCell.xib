@@ -20,31 +20,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B9T-Cm-uq2">
-                        <rect key="frame" x="16" y="16" width="375" height="35.5"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oKr-an-EmO">
+                        <rect key="frame" x="152.5" y="16" width="70" height="35.5"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oKr-an-EmO">
-                                <rect key="frame" x="187.5" y="0.0" width="0.0" height="35.5"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="SM3-Ib-mz6">
-                                        <rect key="frame" x="0.0" y="0.0" width="20" height="35.5"/>
-                                    </activityIndicatorView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DZ-0q-iqB">
-                                        <rect key="frame" x="28" y="0.0" width="0.0" height="35.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="SM3-Ib-mz6">
+                                <rect key="frame" x="0.0" y="0.0" width="20" height="35.5"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DZ-0q-iqB">
+                                <rect key="frame" x="28" y="0.0" width="42" height="35.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="B9T-Cm-uq2" firstAttribute="leading" secondItem="hW6-eM-Ba6" secondAttribute="leadingMargin" id="67I-wW-mHB"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="B9T-Cm-uq2" secondAttribute="trailing" id="TiX-6q-Gr4"/>
-                    <constraint firstItem="B9T-Cm-uq2" firstAttribute="top" secondItem="hW6-eM-Ba6" secondAttribute="topMargin" id="YOT-YE-J5I"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="B9T-Cm-uq2" secondAttribute="bottom" id="th8-Qd-oIk"/>
+                    <constraint firstAttribute="topMargin" secondItem="oKr-an-EmO" secondAttribute="top" id="h5O-A2-adK"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="oKr-an-EmO" secondAttribute="bottom" id="hgu-Ig-x2z"/>
+                    <constraint firstItem="oKr-an-EmO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hW6-eM-Ba6" secondAttribute="leading" id="jV0-VH-Aq0"/>
+                    <constraint firstItem="oKr-an-EmO" firstAttribute="centerX" secondItem="hW6-eM-Ba6" secondAttribute="centerX" id="r06-jV-BLs"/>
                 </constraints>
                 <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
             </tableViewCellContentView>

@@ -38,7 +38,13 @@
                         <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                         <viewLayoutGuide key="safeArea" id="xr3-KR-ASx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="vVn-O9-MkG"/>
+                    <navigationItem key="navigationItem" title="Title" id="vVn-O9-MkG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="sYS-Cr-KVy">
+                            <connections>
+                                <action selector="reloadTriggered:" destination="ahC-E7-x0e" id="1wy-rJ-yNa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="YdK-RO-2rw" id="sax-sP-8Q0"/>
                         <segue destination="JFm-Bv-ytb" kind="show" identifier="showEventDetail" id="OeF-yA-hDx"/>
