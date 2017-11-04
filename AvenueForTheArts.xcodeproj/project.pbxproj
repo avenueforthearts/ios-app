@@ -13,9 +13,13 @@
 		033604B11FAAA98E00A0E500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033604B01FAAA98E00A0E500 /* Assets.xcassets */; };
 		033604B41FAAA98E00A0E500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033604B21FAAA98E00A0E500 /* LaunchScreen.storyboard */; };
 		033604BC1FAAAB3700A0E500 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 033604BB1FAAAB3700A0E500 /* Podfile */; };
-		033604C61FAAAD3900A0E500 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033604C51FAAAD3900A0E500 /* Configuration.swift */; };
-		033604C81FAAAD4700A0E500 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 033604C71FAAAD4700A0E500 /* Configuration.plist */; };
-		F628F3C783CC3C40E5FAB0B6 /* libPods-AvenueForTheArts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5630B3E51968029C54E0C608 /* libPods-AvenueForTheArts.a */; };
+		316AE0F61FAE1D9C0013260D /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE0F51FAE1D9C0013260D /* EventStore.swift */; };
+		31A5CFAC1FAD55630050FD37 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFAB1FAD55630050FD37 /* Event.swift */; };
+		31A5CFAE1FAD556F0050FD37 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFAD1FAD556F0050FD37 /* API.swift */; };
+		31A5CFB01FAD67920050FD37 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFAF1FAD67920050FD37 /* Models.swift */; };
+		31A5CFB31FAD69040050FD37 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFB21FAD69040050FD37 /* Endpoints.swift */; };
+		31A5CFB51FAD69340050FD37 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFB41FAD69340050FD37 /* Events.swift */; };
+		A8A5A52D9BBF6EAC46EE4F46 /* Pods_AvenueForTheArts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28BD268B54951870B37F1A8 /* Pods_AvenueForTheArts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +31,15 @@
 		033604B31FAAA98E00A0E500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		033604B51FAAA98E00A0E500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		033604BB1FAAAB3700A0E500 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		033604C51FAAAD3900A0E500 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = AvenueForTheArts/Utilities/Configuration/Configuration.swift; sourceTree = SOURCE_ROOT; };
-		033604C71FAAAD4700A0E500 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Configuration.plist; path = AvenueForTheArts/Utilities/Configuration/Configuration.plist; sourceTree = SOURCE_ROOT; };
 		1AF6BD00CD80F2491A374D39 /* Pods-AvenueForTheArts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AvenueForTheArts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AvenueForTheArts/Pods-AvenueForTheArts.debug.xcconfig"; sourceTree = "<group>"; };
-		5630B3E51968029C54E0C608 /* libPods-AvenueForTheArts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AvenueForTheArts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		316AE0F51FAE1D9C0013260D /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
+		31A5CFAB1FAD55630050FD37 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		31A5CFAD1FAD556F0050FD37 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		31A5CFAF1FAD67920050FD37 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		31A5CFB21FAD69040050FD37 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		31A5CFB41FAD69340050FD37 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		A6C29C289B14623C6EC12C3F /* Pods-AvenueForTheArts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AvenueForTheArts.release.xcconfig"; path = "Pods/Target Support Files/Pods-AvenueForTheArts/Pods-AvenueForTheArts.release.xcconfig"; sourceTree = "<group>"; };
+		D28BD268B54951870B37F1A8 /* Pods_AvenueForTheArts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AvenueForTheArts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F628F3C783CC3C40E5FAB0B6 /* libPods-AvenueForTheArts.a in Frameworks */,
+				A8A5A52D9BBF6EAC46EE4F46 /* Pods_AvenueForTheArts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +76,8 @@
 		033604A81FAAA98E00A0E500 /* AvenueForTheArts */ = {
 			isa = PBXGroup;
 			children = (
-				033604C31FAAACC700A0E500 /* Utilities */,
+				316AE0F41FAE1D8D0013260D /* Store */,
+				31A5CFA91FAD552C0050FD37 /* API */,
 				033604A91FAAA98E00A0E500 /* AppDelegate.swift */,
 				033604AB1FAAA98E00A0E500 /* ViewController.swift */,
 				033604AD1FAAA98E00A0E500 /* Main.storyboard */,
@@ -79,21 +88,40 @@
 			path = AvenueForTheArts;
 			sourceTree = "<group>";
 		};
-		033604C31FAAACC700A0E500 /* Utilities */ = {
+		316AE0F41FAE1D8D0013260D /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				033604C41FAAACD100A0E500 /* Configuration */,
+				316AE0F51FAE1D9C0013260D /* EventStore.swift */,
 			);
-			path = Utilities;
+			path = Store;
 			sourceTree = "<group>";
 		};
-		033604C41FAAACD100A0E500 /* Configuration */ = {
+		31A5CFA91FAD552C0050FD37 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				033604C51FAAAD3900A0E500 /* Configuration.swift */,
-				033604C71FAAAD4700A0E500 /* Configuration.plist */,
+				31A5CFB11FAD68F20050FD37 /* Endpoints */,
+				31A5CFAA1FAD55460050FD37 /* Models */,
+				31A5CFAD1FAD556F0050FD37 /* API.swift */,
 			);
-			path = Configuration;
+			path = API;
+			sourceTree = "<group>";
+		};
+		31A5CFAA1FAD55460050FD37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CFAF1FAD67920050FD37 /* Models.swift */,
+				31A5CFAB1FAD55630050FD37 /* Event.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		31A5CFB11FAD68F20050FD37 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CFB21FAD69040050FD37 /* Endpoints.swift */,
+				31A5CFB41FAD69340050FD37 /* Events.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		8CD06B952FB7465B85B4A7F7 /* Pods */ = {
@@ -108,7 +136,7 @@
 		A8B2518AEFF79FD325CBF5D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5630B3E51968029C54E0C608 /* libPods-AvenueForTheArts.a */,
+				D28BD268B54951870B37F1A8 /* Pods_AvenueForTheArts.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +178,11 @@
 					033604A51FAAA98E00A0E500 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -177,7 +210,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				033604B41FAAA98E00A0E500 /* LaunchScreen.storyboard in Resources */,
-				033604C81FAAAD4700A0E500 /* Configuration.plist in Resources */,
 				033604B11FAAA98E00A0E500 /* Assets.xcassets in Resources */,
 				033604BC1FAAAB3700A0E500 /* Podfile in Resources */,
 				033604AF1FAAA98E00A0E500 /* Main.storyboard in Resources */,
@@ -243,9 +275,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AvenueForTheArts/Pods-AvenueForTheArts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -259,8 +300,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				033604C61FAAAD3900A0E500 /* Configuration.swift in Sources */,
+				31A5CFAE1FAD556F0050FD37 /* API.swift in Sources */,
+				31A5CFB31FAD69040050FD37 /* Endpoints.swift in Sources */,
+				316AE0F61FAE1D9C0013260D /* EventStore.swift in Sources */,
+				31A5CFB01FAD67920050FD37 /* Models.swift in Sources */,
 				033604AC1FAAA98E00A0E500 /* ViewController.swift in Sources */,
+				31A5CFAC1FAD55630050FD37 /* Event.swift in Sources */,
+				31A5CFB51FAD69340050FD37 /* Events.swift in Sources */,
 				033604AA1FAAA98E00A0E500 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,7 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4R8XXUKU6X;
+				DEVELOPMENT_TEAM = 8DJ5Z435D4;
 				INFOPLIST_FILE = AvenueForTheArts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -417,7 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4R8XXUKU6X;
+				DEVELOPMENT_TEAM = 8DJ5Z435D4;
 				INFOPLIST_FILE = AvenueForTheArts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
