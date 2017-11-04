@@ -17,6 +17,18 @@
 		316AE0FB1FAE2E100013260D /* EventListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE0FA1FAE2E100013260D /* EventListController.swift */; };
 		316AE0FD1FAE2E800013260D /* EventDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE0FC1FAE2E800013260D /* EventDetailController.swift */; };
 		316AE0FF1FAE2EB50013260D /* EventListController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316AE0FE1FAE2EB50013260D /* EventListController.storyboard */; };
+		316AE1031FAE33230013260D /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE1021FAE33230013260D /* EventListCell.swift */; };
+		316AE1071FAE336D0013260D /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE1061FAE336D0013260D /* LoadingCell.swift */; };
+		316AE1091FAE33880013260D /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316AE1081FAE33880013260D /* LoadingCell.xib */; };
+		316AE1111FAE33B40013260D /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE10B1FAE33B40013260D /* NibLoadable.swift */; };
+		316AE1121FAE33B40013260D /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE10C1FAE33B40013260D /* NibOwnerLoadable.swift */; };
+		316AE1131FAE33B40013260D /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE10D1FAE33B40013260D /* Reusable.swift */; };
+		316AE1141FAE33B40013260D /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE10E1FAE33B40013260D /* StoryboardBased.swift */; };
+		316AE1151FAE33B40013260D /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE10F1FAE33B40013260D /* UICollectionView+Reusable.swift */; };
+		316AE1161FAE33B40013260D /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE1101FAE33B40013260D /* UITableView+Reusable.swift */; };
+		316AE1191FAE353B0013260D /* ErrorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316AE1181FAE353B0013260D /* ErrorCell.xib */; };
+		316AE11B1FAE35430013260D /* ErrorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE11A1FAE35430013260D /* ErrorCell.swift */; };
+		316AE11F1FAE38070013260D /* EventListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316AE11E1FAE38070013260D /* EventListCell.xib */; };
 		31A5CFAC1FAD55630050FD37 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFAB1FAD55630050FD37 /* Event.swift */; };
 		31A5CFAE1FAD556F0050FD37 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFAD1FAD556F0050FD37 /* API.swift */; };
 		31A5CFB01FAD67920050FD37 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFAF1FAD67920050FD37 /* Models.swift */; };
@@ -39,6 +51,18 @@
 		316AE0FA1FAE2E100013260D /* EventListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListController.swift; sourceTree = "<group>"; };
 		316AE0FC1FAE2E800013260D /* EventDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailController.swift; sourceTree = "<group>"; };
 		316AE0FE1FAE2EB50013260D /* EventListController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventListController.storyboard; sourceTree = "<group>"; };
+		316AE1021FAE33230013260D /* EventListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
+		316AE1061FAE336D0013260D /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		316AE1081FAE33880013260D /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		316AE10B1FAE33B40013260D /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		316AE10C1FAE33B40013260D /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadable.swift; sourceTree = "<group>"; };
+		316AE10D1FAE33B40013260D /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		316AE10E1FAE33B40013260D /* StoryboardBased.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardBased.swift; sourceTree = "<group>"; };
+		316AE10F1FAE33B40013260D /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		316AE1101FAE33B40013260D /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		316AE1181FAE353B0013260D /* ErrorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorCell.xib; sourceTree = "<group>"; };
+		316AE11A1FAE35430013260D /* ErrorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCell.swift; sourceTree = "<group>"; };
+		316AE11E1FAE38070013260D /* EventListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventListCell.xib; sourceTree = "<group>"; };
 		31A5CFAB1FAD55630050FD37 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		31A5CFAD1FAD556F0050FD37 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		31A5CFAF1FAD67920050FD37 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -82,6 +106,7 @@
 		033604A81FAAA98E00A0E500 /* AvenueForTheArts */ = {
 			isa = PBXGroup;
 			children = (
+				316AE1171FAE33B70013260D /* Extensions */,
 				316AE0F71FAE26530013260D /* UI */,
 				316AE0F41FAE1D8D0013260D /* Store */,
 				31A5CFA91FAD552C0050FD37 /* API */,
@@ -104,13 +129,72 @@
 		316AE0F71FAE26530013260D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				316AE1041FAE335C0013260D /* Common */,
+				316AE1001FAE32FA0013260D /* Events */,
 				033604AD1FAAA98E00A0E500 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		316AE1001FAE32FA0013260D /* Events */ = {
+			isa = PBXGroup;
+			children = (
 				316AE0FC1FAE2E800013260D /* EventDetailController.swift */,
 				316AE0F81FAE26650013260D /* EventDetailController.storyboard */,
 				316AE0FA1FAE2E100013260D /* EventListController.swift */,
 				316AE0FE1FAE2EB50013260D /* EventListController.storyboard */,
+				316AE1011FAE33040013260D /* Cells */,
 			);
-			path = UI;
+			path = Events;
+			sourceTree = "<group>";
+		};
+		316AE1011FAE33040013260D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				316AE1021FAE33230013260D /* EventListCell.swift */,
+				316AE11E1FAE38070013260D /* EventListCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		316AE1041FAE335C0013260D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				316AE1051FAE33610013260D /* Cells */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		316AE1051FAE33610013260D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				316AE1061FAE336D0013260D /* LoadingCell.swift */,
+				316AE1081FAE33880013260D /* LoadingCell.xib */,
+				316AE11A1FAE35430013260D /* ErrorCell.swift */,
+				316AE1181FAE353B0013260D /* ErrorCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		316AE10A1FAE33B40013260D /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				316AE10B1FAE33B40013260D /* NibLoadable.swift */,
+				316AE10C1FAE33B40013260D /* NibOwnerLoadable.swift */,
+				316AE10D1FAE33B40013260D /* Reusable.swift */,
+				316AE10E1FAE33B40013260D /* StoryboardBased.swift */,
+				316AE10F1FAE33B40013260D /* UICollectionView+Reusable.swift */,
+				316AE1101FAE33B40013260D /* UITableView+Reusable.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		316AE1171FAE33B70013260D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				316AE10A1FAE33B40013260D /* Reusable */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		31A5CFA91FAD552C0050FD37 /* API */ = {
@@ -226,8 +310,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316AE1191FAE353B0013260D /* ErrorCell.xib in Resources */,
+				316AE1091FAE33880013260D /* LoadingCell.xib in Resources */,
 				033604B41FAAA98E00A0E500 /* LaunchScreen.storyboard in Resources */,
 				316AE0F91FAE26650013260D /* EventDetailController.storyboard in Resources */,
+				316AE11F1FAE38070013260D /* EventListCell.xib in Resources */,
 				033604B11FAAA98E00A0E500 /* Assets.xcassets in Resources */,
 				316AE0FF1FAE2EB50013260D /* EventListController.storyboard in Resources */,
 				033604BC1FAAAB3700A0E500 /* Podfile in Resources */,
@@ -320,13 +407,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A5CFAE1FAD556F0050FD37 /* API.swift in Sources */,
+				316AE1121FAE33B40013260D /* NibOwnerLoadable.swift in Sources */,
 				31A5CFB31FAD69040050FD37 /* Endpoints.swift in Sources */,
 				316AE0F61FAE1D9C0013260D /* EventStore.swift in Sources */,
+				316AE1071FAE336D0013260D /* LoadingCell.swift in Sources */,
 				31A5CFB01FAD67920050FD37 /* Models.swift in Sources */,
+				316AE1161FAE33B40013260D /* UITableView+Reusable.swift in Sources */,
+				316AE1131FAE33B40013260D /* Reusable.swift in Sources */,
 				31A5CFAC1FAD55630050FD37 /* Event.swift in Sources */,
 				31A5CFB51FAD69340050FD37 /* Events.swift in Sources */,
 				316AE0FD1FAE2E800013260D /* EventDetailController.swift in Sources */,
 				316AE0FB1FAE2E100013260D /* EventListController.swift in Sources */,
+				316AE1111FAE33B40013260D /* NibLoadable.swift in Sources */,
+				316AE1031FAE33230013260D /* EventListCell.swift in Sources */,
+				316AE11B1FAE35430013260D /* ErrorCell.swift in Sources */,
+				316AE1151FAE33B40013260D /* UICollectionView+Reusable.swift in Sources */,
+				316AE1141FAE33B40013260D /* StoryboardBased.swift in Sources */,
 				033604AA1FAAA98E00A0E500 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,6 +26,10 @@ class EventListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.register(cellType: LoadingCell.self)
+        self.tableView.register(cellType: ErrorCell.self)
+        self.tableView.register(cellType: EventListCell.self)
+
         self.state
             .asObservable()
             .observeOn(MainScheduler.asyncInstance)
@@ -43,7 +47,7 @@ class EventListController: UIViewController {
                         .subscribe(
                             onNext: { state in
                                 _self.state.value = state
-                        }
+                            }
                         )
                         .disposed(by: _self.loadingBag)
                 case .loaded(_):
@@ -85,24 +89,22 @@ extension EventListController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch self.state.value {
         case .ready:
-            fatalError("bro we ready")
+            fatalError("Attempted to dequeue a cell while in the ready state")
         case .loading:
-            let cell = UITableViewCell()
-            cell.contentView.backgroundColor = .yellow
-            return cell
+            return tableView.dequeueReusableCell(for: indexPath) as LoadingCell
         case .loaded(let events):
-            let cell = UITableViewCell()
-            cell.contentView.backgroundColor = .green
-            return cell
+            return tableView.dequeueReusableCell(for: indexPath) as EventListCell
         case .error:
-            let cell = UITableViewCell()
-            cell.contentView.backgroundColor = .red
-            return cell
+            return tableView.dequeueReusableCell(for: indexPath) as ErrorCell
         }
     }
 
 }
 
 extension EventListController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let eventCell = self.tableView.cellForRow(at: indexPath) as? EventListCell {
+            self.performSegue(withIdentifier: "showEventDetail", sender: eventCell)
+        }
+    }
 }

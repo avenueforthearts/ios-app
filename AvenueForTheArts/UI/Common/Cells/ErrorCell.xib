@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="122" id="cOO-wV-oM4" customClass="ErrorCell" customModule="AvenueForTheArts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="cOO-wV-oM4" id="7H8-7B-pEo">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="121.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hLL-Bm-vHb">
+                        <rect key="frame" x="16" y="16" width="343" height="89.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vio-Tn-NvQ">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tl-Pe-jPS">
+                                <rect key="frame" x="0.0" y="28.5" width="343" height="61"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="retryButtonPressed:" destination="cOO-wV-oM4" eventType="touchUpInside" id="EEQ-gA-JrS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hLL-Bm-vHb" firstAttribute="leading" secondItem="7H8-7B-pEo" secondAttribute="leadingMargin" id="80C-3T-BK1"/>
+                    <constraint firstItem="hLL-Bm-vHb" firstAttribute="top" secondItem="7H8-7B-pEo" secondAttribute="topMargin" id="Bck-wN-stY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hLL-Bm-vHb" secondAttribute="trailing" id="Gti-Zu-XKS"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hLL-Bm-vHb" secondAttribute="bottom" id="KMl-Uc-2j1"/>
+                </constraints>
+                <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="message" destination="Vio-Tn-NvQ" id="ejy-QG-OYN"/>
+                <outlet property="retryButton" destination="2tl-Pe-jPS" id="nAf-Oh-7AU"/>
+            </connections>
+            <point key="canvasLocation" x="-102.5" y="-233"/>
+        </tableViewCell>
+    </objects>
+</document>
