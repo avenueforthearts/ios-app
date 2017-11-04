@@ -30,6 +30,7 @@
 		316AE11B1FAE35430013260D /* ErrorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE11A1FAE35430013260D /* ErrorCell.swift */; };
 		316AE11F1FAE38070013260D /* EventListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316AE11E1FAE38070013260D /* EventListCell.xib */; };
 		316AE1241FAE3E520013260D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 316AE1261FAE3E520013260D /* Localizable.strings */; };
+		316AE1291FAE756A0013260D /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 316AE1281FAE756A0013260D /* AppIcon.xcassets */; };
 		31A5CFAC1FAD55630050FD37 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFAB1FAD55630050FD37 /* Event.swift */; };
 		31A5CFAE1FAD556F0050FD37 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFAD1FAD556F0050FD37 /* API.swift */; };
 		31A5CFB01FAD67920050FD37 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFAF1FAD67920050FD37 /* Models.swift */; };
@@ -68,6 +69,7 @@
 		316AE1211FAE3D7E0013260D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		316AE1251FAE3E520013260D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		316AE1271FAE3E5C0013260D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		316AE1281FAE756A0013260D /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		31A5CFAB1FAD55630050FD37 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		31A5CFAD1FAD556F0050FD37 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		31A5CFAF1FAD67920050FD37 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				31A5CFA91FAD552C0050FD37 /* API */,
 				033604A91FAAA98E00A0E500 /* AppDelegate.swift */,
 				033604B01FAAA98E00A0E500 /* Assets.xcassets */,
+				316AE1281FAE756A0013260D /* AppIcon.xcassets */,
 				033604B21FAAA98E00A0E500 /* LaunchScreen.storyboard */,
 				033604B51FAAA98E00A0E500 /* Info.plist */,
 				316AE1261FAE3E520013260D /* Localizable.strings */,
@@ -327,6 +330,7 @@
 				316AE0FF1FAE2EB50013260D /* EventListController.storyboard in Resources */,
 				033604BC1FAAAB3700A0E500 /* Podfile in Resources */,
 				033604AF1FAAA98E00A0E500 /* Main.storyboard in Resources */,
+				316AE1291FAE756A0013260D /* AppIcon.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +376,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AvenueForTheArts/Pods-AvenueForTheArts-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/HockeySDK/HockeySDKResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/HockeySDK/HockeySDKResources.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
