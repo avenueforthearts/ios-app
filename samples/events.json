@@ -1,0 +1,188 @@
+{
+  "data": [
+    {
+      "description": "Sanctuary Folk Art ( Reb and Carmel and all) will be leaving our location at 140 South Division after 18 years of business in Heartside.\n\nCome see us and invest in one last piece of art from this legacy location.\n\nPlease visit and say \"Happy Trails\" before our October 31 , 2017 exit.\n\nThanks to all of Grand Rapids and beyond for a memorable run.",
+      "end_time": "2017-10-16T16:00:00-0400",
+      "name": "Happy Trails Sale",
+      "place": {
+        "name": "Sanctuary Folk Art Gallery",
+        "location": {
+          "city": "Grand Rapids",
+          "country": "United States",
+          "latitude": 42.960024068092,
+          "longitude": -85.667990302003,
+          "state": "MI",
+          "street": "140 Division Ave S",
+          "zip": "49503"
+        },
+        "id": "195817423795562"
+      },
+      "start_time": "2017-10-02T16:00:00-0400",
+      "id": "118228172207887"
+    },
+    {
+      "description": "Grand Rapids Legend Reb Roberts teams up with Andrew Hawks for an art show and live collaboration.\n\nThis show will be immediately followed by Calder City Development Corp & Those Guys Painting Company present : Foundation.  (Follow link for more info)\n\nhttps://www.facebook.com/events/1069949626474080/?ref=br_rs",
+      "end_time": "2017-07-22T22:00:00-0400",
+      "name": "Reb Roberts ::: Andrew Hawks ::: Art Show ::: Live Collab",
+      "place": {
+        "name": "Those Guys Painting Company",
+        "location": {
+          "city": "Grand Rapids",
+          "country": "United States",
+          "latitude": 42.943685027142,
+          "longitude": -85.685613155365,
+          "state": "MI",
+          "street": "740 Curve St SW",
+          "zip": "49503"
+        },
+        "id": "683345465086395"
+      },
+      "start_time": "2017-07-22T17:00:00-0400",
+      "id": "2012067272356362"
+    },
+    {
+      "description": "Yard art sale with work by Carmella and Reb",
+      "name": "Yart Sale",
+      "place": {
+        "name": "2151 Durant SE Grand Rapids 49506"
+      },
+      "start_time": "2017-07-04T12:00:00-0400",
+      "id": "158317071381043"
+    },
+    {
+      "description": "Sanctuary Folk Art's semi-annual Yart Sale @ Reb and Carmel's .",
+      "end_time": "2017-06-17T19:00:00-0400",
+      "name": "Yart Sale ",
+      "place": {
+        "name": "2151 Durant Drive SE  EGR 49506"
+      },
+      "start_time": "2017-06-17T09:00:00-0400",
+      "id": "259498164528439"
+    },
+    {
+      "description": "Sanctuary Folk Art Gallery presents the 5th annual Outsiders Art Fair. Located at the center of the universe, featuring local talent, art, pop, folk. $5 admission.",
+      "end_time": "2016-09-17T19:00:00-0400",
+      "name": "Big Bang 2016",
+      "place": {
+        "name": "Mangiamo",
+        "location": {
+          "city": "Grand Rapids",
+          "country": "United States",
+          "latitude": 42.959851767763,
+          "longitude": -85.642890435168,
+          "state": "MI",
+          "street": "1033 Lake Dr SE",
+          "zip": "49506-1474"
+        },
+        "id": "115787441783767"
+      },
+      "start_time": "2016-09-17T09:00:00-0400",
+      "id": "1057180801004336"
+    },
+    {
+      "description": "Reuben has created an incredidle mix of functional and purely   beautiful artistic woodworks. Furniture, boxes to keep your treasures in and multi-dimensional wall pieces.                                                      Artist reception   Sat.   Dec.12      5-8 PM",
+      "name": "Reuben VanTil Woodworking Artist/Craftsman Extraordinaire",
+      "place": {
+        "name": "Sanctuary Folk Art Gallery",
+        "location": {
+          "city": "Grand Rapids",
+          "country": "United States",
+          "latitude": 42.960024068092,
+          "longitude": -85.667990302003,
+          "state": "MI",
+          "street": "140 Division Ave S",
+          "zip": "49503"
+        },
+        "id": "195817423795562"
+      },
+      "start_time": "2015-12-12T14:00:00-0500",
+      "id": "760909534008662"
+    },
+    {
+      "description": "Henry Brown is by far West Michigan's most extraordinary collage artist. Every creation by Henry is a visual story full of history, nostalgia and pop eccentricities.",
+      "end_time": "2015-03-17T21:00:00-0400",
+      "name": "St. Patrick's Day w/ New Collage Work By Henry Brown",
+      "place": {
+        "name": "Sanctuary Folk Art Gallery",
+        "location": {
+          "city": "Grand Rapids",
+          "country": "United States",
+          "latitude": 42.960024068092,
+          "longitude": -85.667990302003,
+          "state": "MI",
+          "street": "140 Division Ave S",
+          "zip": "49503"
+        },
+        "id": "195817423795562"
+      },
+      "start_time": "2015-03-17T18:00:00-0400",
+      "id": "613308808769979"
+    },
+    {
+      "description": "Come get your chocolate and art lovers fix on, all at the same time. Soar into Sanctuary Folk Art on your LOVE ROCKET for a sweet blast.",
+      "end_time": "2015-02-14T19:00:00-0500",
+      "name": "Eat Chocolate--Love The Art",
+      "place": {
+        "name": "Sanctuary Folk Art Gallery",
+        "location": {
+          "city": "Grand Rapids",
+          "country": "United States",
+          "latitude": 42.960024068092,
+          "longitude": -85.667990302003,
+          "state": "MI",
+          "street": "140 Division Ave S",
+          "zip": "49503"
+        },
+        "id": "195817423795562"
+      },
+      "start_time": "2015-02-14T16:00:00-0500",
+      "id": "853742048024925"
+    },
+    {
+      "description": "Opening night for recent abstract paintings by David Warmenhoven, Tom Duimstra and Reb Roberts.",
+      "end_time": "2015-01-29T21:00:00-0500",
+      "name": "Modern Distraction",
+      "place": {
+        "name": "Sanctuary Folk Art Gallery",
+        "location": {
+          "city": "Grand Rapids",
+          "country": "United States",
+          "latitude": 42.960024068092,
+          "longitude": -85.667990302003,
+          "state": "MI",
+          "street": "140 Division Ave S",
+          "zip": "49503"
+        },
+        "id": "195817423795562"
+      },
+      "start_time": "2015-01-29T17:00:00-0500",
+      "id": "818432488211645"
+    },
+    {
+      "description": "Black Friday sale at Sanctuary Gallery with great prices on new outsider, contemporary folk and fine art work from many of the Sanctuary artists.",
+      "end_time": "2014-11-28T19:00:00-0500",
+      "name": "Black Friday At Sanctuary",
+      "place": {
+        "name": "Sanctuary Folk Art Gallery",
+        "location": {
+          "city": "Grand Rapids",
+          "country": "United States",
+          "latitude": 42.960024068092,
+          "longitude": -85.667990302003,
+          "state": "MI",
+          "street": "140 Division Ave S",
+          "zip": "49503"
+        },
+        "id": "195817423795562"
+      },
+      "start_time": "2014-11-28T09:00:00-0500",
+      "id": "614789365309786"
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "QVFIUkh0ZAUNrX0ZA3ZADdQd25kVEpUbHVMVmhLOXNpMXZAIMkJvVFFHVmIzS0ZAtbWI5dXI1dllhSjJFb1oyNTVyNGZAMLWpkdklkVUpIdllqTkZAKbjhJOG5LWXJn",
+      "after": "QVFIUnlPODBsb1dLT01hRWdfcnhxam5qcXlJVkFmbUFvQnJkWmZAfRFpYU2k2OTEtQUZA4bW5YZAjlMLW5jMldXUklyc3piNllMOUx3ZADVNQnhyU2pwN2pScHVn"
+    }
+  }
+}
