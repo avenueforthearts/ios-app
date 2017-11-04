@@ -9,6 +9,7 @@ target 'AvenueForTheArts' do
     pod 'Alamofire'
     pod 'RxAlamofire'
     pod 'RxCocoa'
+    pod 'AlamofireImage'
 
     post_install do |installer_representation|
         swift3_pods = [
@@ -16,6 +17,7 @@ target 'AvenueForTheArts' do
             'Alamofire',
             'RxAlamofire',
             'RxCocoa',
+            'AlamofireImage'
         ]
 
         installer_representation.pods_project.targets.each do |target|

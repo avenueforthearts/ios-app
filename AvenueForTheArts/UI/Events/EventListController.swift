@@ -53,7 +53,9 @@ class EventListController: UIViewController {
                     _self.loadingBag = DisposeBag()
                     EventStore.get()
                         .map { events -> State in return .loaded(events) }
-                        .catchErrorJustReturn(.error)
+                        .catchError { error -> Observable<State> in
+                            return .just(.error)
+                        }
                         .subscribe(
                             onNext: { [weak _self] state in
                                 _self?.state.value = state

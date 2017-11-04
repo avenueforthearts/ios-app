@@ -5,7 +5,7 @@ import RxAlamofire
 
 extension API {
     private static var host: String {
-        return "http://localhost:1234"
+        return "http://10.152.191.53:1234"
     }
 
     class Endpoints {
