@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Jq-7W-sFs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="luI-xB-SL6">
+            <objects>
+                <viewController storyboardIdentifier="Map" title="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Jq-7W-sFs" customClass="MapController" customModule="AvenueForTheArts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m0y-Cc-PK7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyk-Qt-Toh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Map..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0F-Me-vg7">
+                                <rect key="frame" x="128.5" y="333" width="118" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SxN-xx-cg4" firstAttribute="bottom" secondItem="Gyk-Qt-Toh" secondAttribute="bottom" id="8Xb-Pp-dCX"/>
+                            <constraint firstItem="Gyk-Qt-Toh" firstAttribute="leading" secondItem="SxN-xx-cg4" secondAttribute="leading" id="DLj-z8-seb"/>
+                            <constraint firstItem="SxN-xx-cg4" firstAttribute="trailing" secondItem="Gyk-Qt-Toh" secondAttribute="trailing" id="Rba-MT-jt0"/>
+                            <constraint firstItem="h0F-Me-vg7" firstAttribute="centerY" secondItem="SxN-xx-cg4" secondAttribute="centerY" id="Vxl-xW-KXa"/>
+                            <constraint firstItem="h0F-Me-vg7" firstAttribute="centerX" secondItem="SxN-xx-cg4" secondAttribute="centerX" id="eep-gb-sZJ"/>
+                            <constraint firstItem="Gyk-Qt-Toh" firstAttribute="top" secondItem="SxN-xx-cg4" secondAttribute="top" id="gRA-sC-VQ3"/>
+                        </constraints>
+                        <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                        <viewLayoutGuide key="safeArea" id="SxN-xx-cg4"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="Gyk-Qt-Toh" id="33H-0L-TfA"/>
+                        <outlet property="statusLabel" destination="h0F-Me-vg7" id="jqW-D6-qyO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsA-eT-Qr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="116"/>
+        </scene>
+    </scenes>
+</document>

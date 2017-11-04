@@ -20,10 +20,20 @@
             </objects>
             <point key="canvasLocation" x="339" y="-139"/>
         </scene>
+        <!--MapController-->
+        <scene sceneID="1mv-tZ-xNF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MapController" id="KIs-nL-TXG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="kbD-zj-fzf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tO8-Rs-OKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="342" y="35"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iij-RU-ogb">
             <objects>
-                <tabBarController id="A9Z-gi-NBy" sceneMemberID="viewController">
+                <tabBarController id="A9Z-gi-NBy" customClass="TabBarController" customModule="AvenueForTheArts" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2m9-Vx-191">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -31,6 +41,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="1Rj-gr-QKb" kind="relationship" relationship="viewControllers" id="xDT-Yv-Xqo"/>
+                        <segue destination="KIs-nL-TXG" kind="relationship" relationship="viewControllers" id="SoD-zq-6Ee"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkW-KZ-lyC" userLabel="First Responder" sceneMemberID="firstResponder"/>

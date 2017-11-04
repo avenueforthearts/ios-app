@@ -38,6 +38,10 @@
 		31A5CFB31FAD69040050FD37 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFB21FAD69040050FD37 /* Endpoints.swift */; };
 		31A5CFB51FAD69340050FD37 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CFB41FAD69340050FD37 /* Events.swift */; };
 		A8A5A52D9BBF6EAC46EE4F46 /* Pods_AvenueForTheArts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28BD268B54951870B37F1A8 /* Pods_AvenueForTheArts.framework */; };
+		DB2655FC1FAE46750099F5DB /* MapController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2655FB1FAE46750099F5DB /* MapController.storyboard */; };
+		DB2655FE1FAE46850099F5DB /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2655FD1FAE46850099F5DB /* MapController.swift */; };
+		DB3827361FAE5C900022F914 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3827351FAE5C900022F914 /* TabBarController.swift */; };
+		DB3827381FAE6AE10022F914 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3827371FAE6AE10022F914 /* UIView+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +83,10 @@
 		31A5CFB41FAD69340050FD37 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		A6C29C289B14623C6EC12C3F /* Pods-AvenueForTheArts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AvenueForTheArts.release.xcconfig"; path = "Pods/Target Support Files/Pods-AvenueForTheArts/Pods-AvenueForTheArts.release.xcconfig"; sourceTree = "<group>"; };
 		D28BD268B54951870B37F1A8 /* Pods_AvenueForTheArts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AvenueForTheArts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB2655FB1FAE46750099F5DB /* MapController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapController.storyboard; sourceTree = "<group>"; };
+		DB2655FD1FAE46850099F5DB /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		DB3827351FAE5C900022F914 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		DB3827371FAE6AE10022F914 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +149,11 @@
 		316AE0F71FAE26530013260D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DB2655FA1FAE3FF10099F5DB /* Map */,
 				316AE1041FAE335C0013260D /* Common */,
 				316AE1001FAE32FA0013260D /* Events */,
 				033604AD1FAAA98E00A0E500 /* Main.storyboard */,
+				DB3827351FAE5C900022F914 /* TabBarController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -204,6 +214,7 @@
 		316AE1171FAE33B70013260D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DB3827371FAE6AE10022F914 /* UIView+Constraints.swift */,
 				316AE10A1FAE33B40013260D /* Reusable */,
 			);
 			path = Extensions;
@@ -253,6 +264,15 @@
 				D28BD268B54951870B37F1A8 /* Pods_AvenueForTheArts.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB2655FA1FAE3FF10099F5DB /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				DB2655FB1FAE46750099F5DB /* MapController.storyboard */,
+				DB2655FD1FAE46850099F5DB /* MapController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +350,7 @@
 				316AE1191FAE353B0013260D /* ErrorCell.xib in Resources */,
 				316AE1091FAE33880013260D /* LoadingCell.xib in Resources */,
 				033604B41FAAA98E00A0E500 /* LaunchScreen.storyboard in Resources */,
+				DB2655FC1FAE46750099F5DB /* MapController.storyboard in Resources */,
 				316AE0F91FAE26650013260D /* EventDetailController.storyboard in Resources */,
 				316AE11F1FAE38070013260D /* EventListCell.xib in Resources */,
 				316AE1241FAE3E520013260D /* Localizable.strings in Resources */,
@@ -430,15 +451,18 @@
 				31A5CFAE1FAD556F0050FD37 /* API.swift in Sources */,
 				316AE1121FAE33B40013260D /* NibOwnerLoadable.swift in Sources */,
 				31A5CFB31FAD69040050FD37 /* Endpoints.swift in Sources */,
+				DB3827381FAE6AE10022F914 /* UIView+Constraints.swift in Sources */,
 				316AE0F61FAE1D9C0013260D /* EventStore.swift in Sources */,
 				316AE1071FAE336D0013260D /* LoadingCell.swift in Sources */,
 				31A5CFB01FAD67920050FD37 /* Models.swift in Sources */,
 				316AE1161FAE33B40013260D /* UITableView+Reusable.swift in Sources */,
 				316AE1131FAE33B40013260D /* Reusable.swift in Sources */,
+				DB2655FE1FAE46850099F5DB /* MapController.swift in Sources */,
 				31A5CFAC1FAD55630050FD37 /* Event.swift in Sources */,
 				31A5CFB51FAD69340050FD37 /* Events.swift in Sources */,
 				316AE0FD1FAE2E800013260D /* EventDetailController.swift in Sources */,
 				316AE0FB1FAE2E100013260D /* EventListController.swift in Sources */,
+				DB3827361FAE5C900022F914 /* TabBarController.swift in Sources */,
 				316AE1111FAE33B40013260D /* NibLoadable.swift in Sources */,
 				316AE1031FAE33230013260D /* EventListCell.swift in Sources */,
 				316AE11B1FAE35430013260D /* ErrorCell.swift in Sources */,
