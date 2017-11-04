@@ -38,6 +38,7 @@
 		DB2655FC1FAE46750099F5DB /* MapController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2655FB1FAE46750099F5DB /* MapController.storyboard */; };
 		DB2655FE1FAE46850099F5DB /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2655FD1FAE46850099F5DB /* MapController.swift */; };
 		DB3827361FAE5C900022F914 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3827351FAE5C900022F914 /* TabBarController.swift */; };
+		DB3827381FAE6AE10022F914 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3827371FAE6AE10022F914 /* UIView+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		DB2655FB1FAE46750099F5DB /* MapController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapController.storyboard; sourceTree = "<group>"; };
 		DB2655FD1FAE46850099F5DB /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		DB3827351FAE5C900022F914 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		DB3827371FAE6AE10022F914 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 		316AE1171FAE33B70013260D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DB3827371FAE6AE10022F914 /* UIView+Constraints.swift */,
 				316AE10A1FAE33B40013260D /* Reusable */,
 			);
 			path = Extensions;
@@ -427,6 +430,7 @@
 				31A5CFAE1FAD556F0050FD37 /* API.swift in Sources */,
 				316AE1121FAE33B40013260D /* NibOwnerLoadable.swift in Sources */,
 				31A5CFB31FAD69040050FD37 /* Endpoints.swift in Sources */,
+				DB3827381FAE6AE10022F914 /* UIView+Constraints.swift in Sources */,
 				316AE0F61FAE1D9C0013260D /* EventStore.swift in Sources */,
 				316AE1071FAE336D0013260D /* LoadingCell.swift in Sources */,
 				31A5CFB01FAD67920050FD37 /* Models.swift in Sources */,

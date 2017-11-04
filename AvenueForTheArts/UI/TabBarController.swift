@@ -16,7 +16,8 @@ class TabBarController: UITabBarController {
     let MapURL = "https://www.google.com/maps/d/u/0/viewer?mid=1qx2B4eYIFcgWSOJKGsaKDoV0Z44&ll=42.96264625711024%2C-85.6686170667308&z=14"
 
     override func viewDidLoad() {
-        self.delegate = self
+        super.viewDidLoad()
+//        self.delegate = self
         if let url = URL(string: MapURL) {
             self.googleMapsURL = url
         }
@@ -27,6 +28,7 @@ class TabBarController: UITabBarController {
     }
 }
 
+/*
 extension TabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         print("Should Select has current Index: \(self.selectedIndex)")
@@ -60,3 +62,5 @@ extension TabBarController: SFSafariViewControllerDelegate {
         print("DONE button tapped")
     }
 }
+ */
+
