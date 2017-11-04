@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Jq-7W-sFs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="luI-xB-SL6">
+            <objects>
+                <viewController storyboardIdentifier="Map" title="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Jq-7W-sFs" customClass="MapController" customModule="AvenueForTheArts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m0y-Cc-PK7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aJS-5c-nOS">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKI-cP-efo">
+                                <rect key="frame" x="166" y="214" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aJS-5c-nOS" firstAttribute="top" secondItem="RKI-cP-efo" secondAttribute="bottom" constant="80" id="4PS-2o-EwD"/>
+                            <constraint firstItem="aJS-5c-nOS" firstAttribute="centerX" secondItem="m0y-Cc-PK7" secondAttribute="centerX" id="OPz-3Y-OFp"/>
+                            <constraint firstItem="aJS-5c-nOS" firstAttribute="centerY" secondItem="m0y-Cc-PK7" secondAttribute="centerY" id="QCF-ZK-mvR"/>
+                            <constraint firstItem="RKI-cP-efo" firstAttribute="centerX" secondItem="m0y-Cc-PK7" secondAttribute="centerX" id="SF5-86-ZyV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SxN-xx-cg4"/>
+                    </view>
+                    <connections>
+                        <outlet property="spinner" destination="aJS-5c-nOS" id="8fU-0x-am6"/>
+                        <outlet property="statusLabel" destination="RKI-cP-efo" id="gCi-Oi-raW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsA-eT-Qr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="116"/>
+        </scene>
+    </scenes>
+</document>
