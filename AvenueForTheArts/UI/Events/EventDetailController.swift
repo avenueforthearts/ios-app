@@ -14,7 +14,8 @@ class EventDetailController: UIViewController {
     @IBOutlet private weak var bannerTop: NSLayoutConstraint!
     @IBOutlet private weak var bannerAspect: NSLayoutConstraint!
     @IBOutlet private weak var statusBarMask: UIView!
-    @IBOutlet private weak var statusBarMaskHeight: NSLayoutConstraint!
+
+    @IBOutlet private weak var navigationTitle: UILabel!
     @IBOutlet private weak var place: UILabel!
     @IBOutlet private weak var dates: UILabel!
     @IBOutlet private weak var mapButton: UIButton!
@@ -51,6 +52,7 @@ class EventDetailController: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         self.dates.text = String(prettyDateRange: self.event)
+        self.navigationTitle.text = self.event.name
 
         self.name.text = self.event.name
         self.descriptionView.text = self.event.description
@@ -89,15 +91,13 @@ class EventDetailController: UIViewController {
             })
         }
     }
-
-    @available(iOS 11.0, *)
-    override func viewSafeAreaInsetsDidChange() {
-        super.viewSafeAreaInsetsDidChange()
-        self.statusBarMaskHeight.constant = self.view.safeAreaInsets.top
-    }
 }
 
 extension EventDetailController {
+    @IBAction private func backPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+
     @IBAction private func addCalendarPressed(_ sender: UIButton) {
         CalendarStore
             .addToCalendar(self.event)

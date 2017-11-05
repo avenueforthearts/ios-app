@@ -48,7 +48,7 @@ extension API.Models {
             self.name = try container.decode(String.self, forKey: .name)
             self.description = try container.decode(String.self, forKey: .description)
             self.category = try container.decode(String.self, forKey: .category)
-            self.cover = try container.decode(URL.self, forKey: .cover)
+            self.cover = try? container.decode(URL.self, forKey: .cover)
             self.startDate = try container.decode(Date.self, forKey: .startDate)
             self.endDate = try? container.decode(Date.self, forKey: .endDate)
             self.ticketURI = try? container.decode(URL.self, forKey: .ticketURI)
