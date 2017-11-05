@@ -51,6 +51,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEi-9z-QtC" sceneMemberID="firstResponder"/>
+                <tabBarItem title="Events" image="events" id="Awg-p2-Rih"/>
             </objects>
             <point key="canvasLocation" x="2201" y="27"/>
         </scene>
@@ -88,8 +89,12 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Olm-x2-NyA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarItem title="Events" image="events" id="pdR-7s-ayw"/>
             </objects>
             <point key="canvasLocation" x="1396.8" y="26.986506746626688"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="events" width="28" height="28"/>
+    </resources>
 </document>

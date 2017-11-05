@@ -13,7 +13,7 @@
         <scene sceneID="ls5-OR-9K1">
             <objects>
                 <viewControllerPlaceholder storyboardName="EventListController" id="1Rj-gr-QKb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="BO4-HH-qXi"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="events" id="BO4-HH-qXi"/>
                     <navigationItem key="navigationItem" id="qTt-3b-xDe"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IFo-ZA-8qE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,11 +24,21 @@
         <scene sceneID="1mv-tZ-xNF">
             <objects>
                 <viewControllerPlaceholder storyboardName="MapController" id="KIs-nL-TXG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="kbD-zj-fzf"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="site" selectedImage="locataion" id="kbD-zj-fzf"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tO8-Rs-OKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="342" y="35"/>
+        </scene>
+        <!--InfoController-->
+        <scene sceneID="iIa-5h-eHJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InfoController" id="hQc-QI-92X" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info" selectedImage="info" id="71v-cz-5dg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dgj-ea-4Zw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="192"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iij-RU-ogb">
@@ -42,6 +52,7 @@
                     <connections>
                         <segue destination="1Rj-gr-QKb" kind="relationship" relationship="viewControllers" id="xDT-Yv-Xqo"/>
                         <segue destination="KIs-nL-TXG" kind="relationship" relationship="viewControllers" id="SoD-zq-6Ee"/>
+                        <segue destination="hQc-QI-92X" kind="relationship" relationship="viewControllers" id="ce3-bK-64E"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkW-KZ-lyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -49,4 +60,10 @@
             <point key="canvasLocation" x="-657" y="3"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="events" width="28" height="28"/>
+        <image name="info" width="28" height="28"/>
+        <image name="locataion" width="10" height="10"/>
+        <image name="site" width="28" height="28"/>
+    </resources>
 </document>

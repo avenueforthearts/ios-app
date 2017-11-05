@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FOa-kC-bYU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Info-->
+        <scene sceneID="VdB-vt-rmz">
+            <objects>
+                <viewController storyboardIdentifier="Info" title="Info" id="FOa-kC-bYU" customClass="InfoController" customModule="AvenueForTheArts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pWz-w4-djJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lots of Information goes here!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7I-Hu-iKH">
+                                <rect key="frame" x="72.5" y="176" width="230" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F7I-Hu-iKH" firstAttribute="top" secondItem="CoX-3Z-0ll" secondAttribute="top" constant="156" id="XsV-rH-WSL"/>
+                            <constraint firstItem="F7I-Hu-iKH" firstAttribute="centerX" secondItem="CoX-3Z-0ll" secondAttribute="centerX" id="rKQ-EC-x2u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CoX-3Z-0ll"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frL-ZM-Efc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarItem title="Info" image="info" selectedImage="info" id="6b2-df-TRP"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="17"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info" width="28" height="28"/>
+    </resources>
+</document>
