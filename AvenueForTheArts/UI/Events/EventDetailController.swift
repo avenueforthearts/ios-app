@@ -1,9 +1,11 @@
 import UIKit
+import RxSwift
 import Alamofire
 import AlamofireImage
 import MapKit
 
 class EventDetailController: UIViewController {
+
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var name: UILabel!
     @IBOutlet private weak var descriptionView: UITextView!
@@ -17,6 +19,7 @@ class EventDetailController: UIViewController {
     @IBOutlet private weak var dates: UILabel!
     @IBOutlet private weak var mapButton: UIButton!
 
+    private lazy var bag = DisposeBag()
     private let mapSpan = MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015)
     private var mapItem: MKMapItem?
     private var placemark: MKPlacemark? {
@@ -47,6 +50,7 @@ class EventDetailController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.dates.text = String(prettyDateRange: self.event)
 
         self.name.text = self.event.name
         self.descriptionView.text = self.event.description
@@ -95,19 +99,74 @@ class EventDetailController: UIViewController {
 
 extension EventDetailController {
     @IBAction private func addCalendarPressed(_ sender: UIButton) {
-
+        CalendarStore
+            .addToCalendar(self.event)
+            .subscribe(
+                onSuccess: { (status) in
+                    let alert = UIAlertController(
+                        title: NSLocalizedString("add_to_calendar_success_title", comment: ""),
+                        message: String.localizedStringWithFormat(
+                            NSLocalizedString("add_to_calendar_success_message", comment: ""),
+                            self.event.name
+                        ),
+                        preferredStyle: .alert
+                    )
+                    let ok = UIAlertAction(
+                        title: NSLocalizedString("OK", comment: ""),
+                        style: .default,
+                        handler: nil
+                    )
+                    alert.addAction(ok)
+                    self.present(alert, animated: true, completion: nil)
+                },
+                onError: { error in
+                    if error is CalendarStore.AddError {
+                        let alert = UIAlertController(
+                            title: NSLocalizedString("add_to_calendar_permission_title", comment: ""),
+                            message: NSLocalizedString("add_to_calendar_permission_message", comment: ""),
+                            preferredStyle: .alert
+                        )
+                        let ok = UIAlertAction(
+                            title: NSLocalizedString("OK", comment: ""),
+                            style: .default,
+                            handler: nil
+                        )
+                        alert.addAction(ok)
+                        self.present(alert, animated: true, completion: nil)
+                    } else {
+                        let alert = UIAlertController(
+                            title: NSLocalizedString("add_to_calendar_error_title", comment: ""),
+                            message: NSLocalizedString("add_to_calendar_error_message", comment: ""),
+                            preferredStyle: .alert
+                        )
+                        let ok = UIAlertAction(
+                            title: NSLocalizedString("OK", comment: ""),
+                            style: .default,
+                            handler: nil
+                        )
+                        alert.addAction(ok)
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                }
+            )
+            .disposed(by: self.bag)
     }
 
     @IBAction private func openFacebookPressed(_ sender: UIButton) {
-        if let link = URL(string: "http://www.codingexplorer.com/") {
+        if let link = self.event.link {
             UIApplication.shared.open(link)
         }
     }
 
     @IBAction private func sharePressed(_ sender: UIButton) {
-        let title = "Swift is awesome!  Check out this website about it!"
+        let title = String.localizedStringWithFormat(
+            NSLocalizedString("event_share_format", comment: ""),
+            self.event.name,
+            self.event.placeName,
+            String(prettyDateRange: self.event)
+        )
 
-        if let link = URL(string: "http://www.codingexplorer.com/") {
+        if let link = self.event.link {
             let activityVC = UIActivityViewController(activityItems: [title, link], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = sender
             self.present(activityVC, animated: true, completion: nil)
@@ -127,7 +186,6 @@ extension EventDetailController {
         mapItem.name = self.event.name
         mapItem.openInMaps(launchOptions: options)
     }
-
 }
 
 extension EventDetailController: UIGestureRecognizerDelegate {

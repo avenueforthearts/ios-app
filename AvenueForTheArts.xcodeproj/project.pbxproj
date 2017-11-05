@@ -12,6 +12,10 @@
 		033604B11FAAA98E00A0E500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033604B01FAAA98E00A0E500 /* Assets.xcassets */; };
 		033604B41FAAA98E00A0E500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033604B21FAAA98E00A0E500 /* LaunchScreen.storyboard */; };
 		033604BC1FAAAB3700A0E500 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 033604BB1FAAAB3700A0E500 /* Podfile */; };
+		313794B81FAF5C88007E80F7 /* PrettyDateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313794B71FAF5C88007E80F7 /* PrettyDateRange.swift */; };
+		313794BA1FAF64ED007E80F7 /* CalendarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313794B91FAF64ED007E80F7 /* CalendarStore.swift */; };
+		314DC4FB1FAF6C720078BD81 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 314DC4FA1FAF6C720078BD81 /* Info.plist */; };
+		314DC4FC1FAF6C7A0078BD81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 314DC4FE1FAF6C7A0078BD81 /* InfoPlist.strings */; };
 		316A891E1FAEA291009E1BDA /* ButtonShapes.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 316A891D1FAEA291009E1BDA /* ButtonShapes.xcassets */; };
 		316AE0F61FAE1D9C0013260D /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE0F51FAE1D9C0013260D /* EventStore.swift */; };
 		316AE0F91FAE26650013260D /* EventDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316AE0F81FAE26650013260D /* EventDetailController.storyboard */; };
@@ -53,9 +57,13 @@
 		033604AE1FAAA98E00A0E500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		033604B01FAAA98E00A0E500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		033604B31FAAA98E00A0E500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		033604B51FAAA98E00A0E500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		033604BB1FAAAB3700A0E500 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1AF6BD00CD80F2491A374D39 /* Pods-AvenueForTheArts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AvenueForTheArts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AvenueForTheArts/Pods-AvenueForTheArts.debug.xcconfig"; sourceTree = "<group>"; };
+		313794B71FAF5C88007E80F7 /* PrettyDateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyDateRange.swift; sourceTree = "<group>"; };
+		313794B91FAF64ED007E80F7 /* CalendarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStore.swift; sourceTree = "<group>"; };
+		314DC4FA1FAF6C720078BD81 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		314DC4FD1FAF6C7A0078BD81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		314DC4FF1FAF6C7B0078BD81 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		316A891D1FAEA291009E1BDA /* ButtonShapes.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ButtonShapes.xcassets; sourceTree = "<group>"; };
 		316AE0F51FAE1D9C0013260D /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
 		316AE0F81FAE26650013260D /* EventDetailController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventDetailController.storyboard; sourceTree = "<group>"; };
@@ -139,7 +147,8 @@
 				316A891D1FAEA291009E1BDA /* ButtonShapes.xcassets */,
 				316AE1281FAE756A0013260D /* AppIcon.xcassets */,
 				033604B21FAAA98E00A0E500 /* LaunchScreen.storyboard */,
-				033604B51FAAA98E00A0E500 /* Info.plist */,
+				314DC4FE1FAF6C7A0078BD81 /* InfoPlist.strings */,
+				314DC4FA1FAF6C720078BD81 /* Info.plist */,
 				316AE1261FAE3E520013260D /* Localizable.strings */,
 			);
 			path = AvenueForTheArts;
@@ -149,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				316AE0F51FAE1D9C0013260D /* EventStore.swift */,
+				313794B91FAF64ED007E80F7 /* CalendarStore.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -244,6 +254,7 @@
 			children = (
 				31A5CFAF1FAD67920050FD37 /* Models.swift */,
 				31A5CFAB1FAD55630050FD37 /* Event.swift */,
+				313794B71FAF5C88007E80F7 /* PrettyDateRange.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -357,12 +368,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				316AE1191FAE353B0013260D /* ErrorCell.xib in Resources */,
+				314DC4FC1FAF6C7A0078BD81 /* InfoPlist.strings in Resources */,
 				316AE1091FAE33880013260D /* LoadingCell.xib in Resources */,
 				033604B41FAAA98E00A0E500 /* LaunchScreen.storyboard in Resources */,
 				DB2655FC1FAE46750099F5DB /* MapController.storyboard in Resources */,
 				316AE0F91FAE26650013260D /* EventDetailController.storyboard in Resources */,
 				316A891E1FAEA291009E1BDA /* ButtonShapes.xcassets in Resources */,
 				316AE11F1FAE38070013260D /* EventListCell.xib in Resources */,
+				314DC4FB1FAF6C720078BD81 /* Info.plist in Resources */,
 				316AE1241FAE3E520013260D /* Localizable.strings in Resources */,
 				033604B11FAAA98E00A0E500 /* Assets.xcassets in Resources */,
 				316AE0FF1FAE2EB50013260D /* EventListController.storyboard in Resources */,
@@ -461,6 +474,7 @@
 			files = (
 				31A5CFAE1FAD556F0050FD37 /* API.swift in Sources */,
 				DB38273C1FAE9BA90022F914 /* EventListHeader.swift in Sources */,
+				313794BA1FAF64ED007E80F7 /* CalendarStore.swift in Sources */,
 				316AE1121FAE33B40013260D /* NibOwnerLoadable.swift in Sources */,
 				31A5CFB31FAD69040050FD37 /* Endpoints.swift in Sources */,
 				DB3827381FAE6AE10022F914 /* UIView+Constraints.swift in Sources */,
@@ -477,6 +491,7 @@
 				DB3827361FAE5C900022F914 /* TabBarController.swift in Sources */,
 				316AE1111FAE33B40013260D /* NibLoadable.swift in Sources */,
 				316AE1031FAE33230013260D /* EventListCell.swift in Sources */,
+				313794B81FAF5C88007E80F7 /* PrettyDateRange.swift in Sources */,
 				316AE11B1FAE35430013260D /* ErrorCell.swift in Sources */,
 				316AE1151FAE33B40013260D /* UICollectionView+Reusable.swift in Sources */,
 				316AE1141FAE33B40013260D /* StoryboardBased.swift in Sources */,
@@ -503,6 +518,15 @@
 				316AE1211FAE3D7E0013260D /* es */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		314DC4FE1FAF6C7A0078BD81 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				314DC4FD1FAF6C7A0078BD81 /* en */,
+				314DC4FF1FAF6C7B0078BD81 /* es */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		316AE1261FAE3E520013260D /* Localizable.strings */ = {

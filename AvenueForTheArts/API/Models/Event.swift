@@ -38,6 +38,10 @@ extension API.Models {
         let street: String?
         let zip: String?
 
+        var link: URL? {
+            return URL(string: "https://facebook.com/events/\(self.id)")
+        }
+
         init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
             self.id = try container.decode(String.self, forKey: .id)
@@ -46,7 +50,7 @@ extension API.Models {
             self.category = try container.decode(String.self, forKey: .category)
             self.cover = try container.decode(URL.self, forKey: .cover)
             self.startDate = try container.decode(Date.self, forKey: .startDate)
-            self.endDate = try container.decode(Date.self, forKey: .endDate)
+            self.endDate = try? container.decode(Date.self, forKey: .endDate)
             self.ticketURI = try? container.decode(URL.self, forKey: .ticketURI)
             self.placeName = try container.decode(String.self, forKey: .placeName)
             self.city = try container.decode(String.self, forKey: .city)
@@ -66,4 +70,9 @@ extension API.Models {
             self.zip = try container.decode(String.self, forKey: .zip)
         }
     }
+}
+
+extension API.Models.Event: PrettyDateRange {
+    var start: Date { return self.startDate }
+    var end: Date? { return self.endDate }
 }

@@ -47,7 +47,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tr3-p9-a55">
-                                        <rect key="frame" x="0.0" y="234" width="375" height="585"/>
+                                        <rect key="frame" x="0.0" y="234" width="375" height="590"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hKh-8E-6tN" userLabel="Name / Date">
                                                 <rect key="frame" x="16" y="16" width="343" height="38"/>
@@ -135,9 +135,8 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAF-1G-Tqb">
-                                                <rect key="frame" x="251" y="544" width="124" height="41"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAF-1G-Tqb">
+                                                <rect key="frame" x="-72.5" y="544" width="145" height="46"/>
                                                 <inset key="contentEdgeInsets" minX="16" minY="12" maxX="16" maxY="12"/>
                                                 <state key="normal" title="Show in Maps">
                                                     <color key="titleColor" red="0.69019607839999997" green="0.21176470589999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -166,11 +165,11 @@
                                             <constraint firstAttribute="bottom" secondItem="kAF-1G-Tqb" secondAttribute="bottom" id="EnS-67-QNv"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="hKh-8E-6tN" secondAttribute="trailing" id="F2G-RB-FU7"/>
                                             <constraint firstItem="kAF-1G-Tqb" firstAttribute="top" secondItem="kMb-BF-RuC" secondAttribute="bottom" id="HmT-Ue-Jen"/>
-                                            <constraint firstAttribute="trailing" secondItem="kAF-1G-Tqb" secondAttribute="trailing" id="Khl-N0-Tf3"/>
                                             <constraint firstItem="YbI-26-MlJ" firstAttribute="leading" secondItem="Tr3-p9-a55" secondAttribute="leadingMargin" id="N72-h1-9Mw"/>
                                             <constraint firstItem="GKU-At-nat" firstAttribute="top" secondItem="I0y-Xc-NbL" secondAttribute="bottom" constant="8" id="OLH-Or-BdX"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="YbI-26-MlJ" secondAttribute="trailing" id="Rgb-5q-5Y3"/>
                                             <constraint firstItem="I0y-Xc-NbL" firstAttribute="leading" secondItem="Tr3-p9-a55" secondAttribute="leadingMargin" id="WHe-6Z-Afu"/>
+                                            <constraint firstItem="kAF-1G-Tqb" firstAttribute="centerX" secondItem="Tr3-p9-a55" secondAttribute="centerX" id="WIP-yT-2rg"/>
                                             <constraint firstItem="I0y-Xc-NbL" firstAttribute="top" secondItem="Rby-kg-tLS" secondAttribute="bottom" constant="8" id="Wk4-pW-KSo"/>
                                             <constraint firstItem="hKh-8E-6tN" firstAttribute="leading" secondItem="Tr3-p9-a55" secondAttribute="leadingMargin" id="YEr-ev-yo2"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="I0y-Xc-NbL" secondAttribute="trailing" id="YYa-OF-8zp"/>
