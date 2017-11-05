@@ -13,7 +13,28 @@ class EventDetailController: UIViewController {
     @IBOutlet private weak var bannerAspect: NSLayoutConstraint!
     @IBOutlet private weak var statusBarMask: UIView!
     @IBOutlet private weak var statusBarMaskHeight: NSLayoutConstraint!
+    @IBOutlet private weak var place: UILabel!
+    @IBOutlet private weak var dates: UILabel!
+    @IBOutlet private weak var mapButton: UIButton!
 
+    private let mapSpan = MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015)
+    private var mapItem: MKMapItem?
+    private var placemark: MKPlacemark? {
+        didSet {
+            guard let placemark = self.placemark else { return }
+            DispatchQueue.main.async {
+                self.mapView.addAnnotation(placemark)
+            }
+        }
+    }
+    private var mapRegion: MKCoordinateRegion? {
+        didSet {
+            guard let region = self.mapRegion else { return }
+            DispatchQueue.main.async {
+                self.mapView.setRegion(region, animated: false)
+            }
+        }
+    }
 
     var event: API.Models.Event!
 
@@ -36,36 +57,31 @@ class EventDetailController: UIViewController {
             self.banner.isHidden = true
         }
 
-        let span = MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015)
+        self.place.text = self.event.placeName
+
         if let lat = self.event.latitude, let long = self.event.longitude {
-            let location = CLLocation(latitude: Double(lat), longitude: Double(long))
+            let location = CLLocation(latitude: lat, longitude: long)
 
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
-                guard error == nil, let center = placemarks?.first?.location else {
-                    self.mapView.isHidden = true
+                guard error == nil, let first = placemarks?.first, let center = first.location else {
+                    self.placemark = MKPlacemark(coordinate: location.coordinate)
+                    self.mapRegion = MKCoordinateRegion(center: location.coordinate, span: self.mapSpan)
                     return
                 }
 
-                placemarks?.forEach {
-                    self.mapView.addAnnotation(MKPlacemark(placemark: $0))
-                }
-                let region = MKCoordinateRegion(center: center.coordinate, span: span)
-                self.mapView.setRegion(region, animated: false)
+                self.placemark = MKPlacemark(placemark: first)
+                self.mapRegion = MKCoordinateRegion(center: center.coordinate, span: self.mapSpan)
             })
 
         } else {
             CLGeocoder().geocodeAddressString(self.event.placeName, completionHandler: { (placemarks, error) in
-                guard error == nil, let center = placemarks?.first?.location else {
-                    self.mapView.isHidden = true
+                guard error == nil, let first = placemarks?.first, let center = first.location else {
+                    self.mapButton.isHidden = true
                     return
                 }
 
-                placemarks?.forEach {
-                    self.mapView.addAnnotation(MKPlacemark(placemark: $0))
-                }
-
-                let region = MKCoordinateRegion(center: center.coordinate, span: span)
-                self.mapView.setRegion(region, animated: false)
+                self.placemark = MKPlacemark(placemark: first)
+                self.mapRegion = MKCoordinateRegion(center: center.coordinate, span: self.mapSpan)
             })
         }
     }
@@ -97,6 +113,21 @@ extension EventDetailController {
             self.present(activityVC, animated: true, completion: nil)
         }
     }
+
+    @IBAction private func openInMapsPressed(_ sender: Any?) {
+        guard let region = self.mapRegion, let place = self.placemark else { return }
+
+        let options = [
+            MKLaunchOptionsMapCenterKey: region.center as Any,
+            MKLaunchOptionsMapSpanKey: region.span as Any,
+            MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking as Any,
+        ]
+
+        let mapItem = MKMapItem(placemark: place)
+        mapItem.name = self.event.name
+        mapItem.openInMaps(launchOptions: options)
+    }
+
 }
 
 extension EventDetailController: UIGestureRecognizerDelegate {

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N17-CL-mWA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N17-CL-mWA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -47,12 +47,12 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tr3-p9-a55">
-                                        <rect key="frame" x="0.0" y="234" width="375" height="642"/>
+                                        <rect key="frame" x="0.0" y="234" width="375" height="585"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hKh-8E-6tN" userLabel="Name / Date">
                                                 <rect key="frame" x="16" y="16" width="343" height="38"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qg-Zt-9ZG">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qg-Zt-9ZG">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                         <nil key="textColor"/>
@@ -88,7 +88,7 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I0y-Xc-NbL">
                                                 <rect key="frame" x="16" y="82" width="343" height="200"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -135,19 +135,38 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kMb-BF-RuC">
-                                                <rect key="frame" x="0.0" y="360" width="375" height="250"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAF-1G-Tqb">
+                                                <rect key="frame" x="251" y="544" width="124" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <inset key="contentEdgeInsets" minX="16" minY="12" maxX="16" maxY="12"/>
+                                                <state key="normal" title="Show in Maps">
+                                                    <color key="titleColor" red="0.69019607839999997" green="0.21176470589999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="openInMapsPressed:" destination="N17-CL-mWA" eventType="touchUpInside" id="V4h-Dm-Nym"/>
+                                                </connections>
+                                            </button>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="mutedStandard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kMb-BF-RuC">
+                                                <rect key="frame" x="0.0" y="344" width="375" height="200"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="kMb-BF-RuC" secondAttribute="height" multiplier="3:2" id="UZP-Jx-Mub"/>
+                                                    <constraint firstAttribute="height" priority="999" constant="200" id="kx5-PU-bxD"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ENl-3n-fH7" appends="YES" id="mcO-4C-pee"/>
+                                                </connections>
                                             </mapView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="GKU-At-nat" firstAttribute="leading" secondItem="Tr3-p9-a55" secondAttribute="leadingMargin" id="7A5-Z2-ngf"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="GKU-At-nat" secondAttribute="trailing" id="8x8-gp-ZnH"/>
+                                            <constraint firstItem="kMb-BF-RuC" firstAttribute="leading" secondItem="Tr3-p9-a55" secondAttribute="leading" id="Cbf-9S-lKg"/>
+                                            <constraint firstAttribute="bottom" secondItem="kAF-1G-Tqb" secondAttribute="bottom" id="EnS-67-QNv"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="hKh-8E-6tN" secondAttribute="trailing" id="F2G-RB-FU7"/>
-                                            <constraint firstItem="kMb-BF-RuC" firstAttribute="top" secondItem="GKU-At-nat" secondAttribute="bottom" constant="16" id="FVk-bc-QO3"/>
+                                            <constraint firstItem="kAF-1G-Tqb" firstAttribute="top" secondItem="kMb-BF-RuC" secondAttribute="bottom" id="HmT-Ue-Jen"/>
+                                            <constraint firstAttribute="trailing" secondItem="kAF-1G-Tqb" secondAttribute="trailing" id="Khl-N0-Tf3"/>
                                             <constraint firstItem="YbI-26-MlJ" firstAttribute="leading" secondItem="Tr3-p9-a55" secondAttribute="leadingMargin" id="N72-h1-9Mw"/>
                                             <constraint firstItem="GKU-At-nat" firstAttribute="top" secondItem="I0y-Xc-NbL" secondAttribute="bottom" constant="8" id="OLH-Or-BdX"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="YbI-26-MlJ" secondAttribute="trailing" id="Rgb-5q-5Y3"/>
@@ -155,11 +174,10 @@
                                             <constraint firstItem="I0y-Xc-NbL" firstAttribute="top" secondItem="Rby-kg-tLS" secondAttribute="bottom" constant="8" id="Wk4-pW-KSo"/>
                                             <constraint firstItem="hKh-8E-6tN" firstAttribute="leading" secondItem="Tr3-p9-a55" secondAttribute="leadingMargin" id="YEr-ev-yo2"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="I0y-Xc-NbL" secondAttribute="trailing" id="YYa-OF-8zp"/>
-                                            <constraint firstAttribute="trailing" secondItem="kMb-BF-RuC" secondAttribute="trailing" id="YcZ-dc-Uz9"/>
-                                            <constraint firstItem="kMb-BF-RuC" firstAttribute="leading" secondItem="Tr3-p9-a55" secondAttribute="leading" id="abX-Kj-F4g"/>
+                                            <constraint firstItem="kMb-BF-RuC" firstAttribute="top" secondItem="GKU-At-nat" secondAttribute="bottom" id="Z6S-RN-dVs"/>
                                             <constraint firstItem="YbI-26-MlJ" firstAttribute="top" secondItem="hKh-8E-6tN" secondAttribute="bottom" constant="8" id="hrm-gz-8t5"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="kMb-BF-RuC" secondAttribute="bottom" constant="16" id="k9y-tH-bfA"/>
                                             <constraint firstItem="hKh-8E-6tN" firstAttribute="top" secondItem="Tr3-p9-a55" secondAttribute="topMargin" id="qmB-RI-1nK"/>
+                                            <constraint firstAttribute="trailing" secondItem="kMb-BF-RuC" secondAttribute="trailing" id="rf6-kV-xZv"/>
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
                                         <userDefinedRuntimeAttributes>
@@ -217,15 +235,23 @@
                         <outlet property="banner" destination="3eE-Y1-eSh" id="rN5-jV-Kvr"/>
                         <outlet property="bannerAspect" destination="Dy9-Eo-6eN" id="p0x-HO-HHK"/>
                         <outlet property="bannerTop" destination="fPk-pc-amD" id="fmW-iH-fvS"/>
+                        <outlet property="dates" destination="VBa-W2-0Bs" id="zJx-BI-Cuk"/>
                         <outlet property="descriptionView" destination="I0y-Xc-NbL" id="bIZ-JI-OB2"/>
+                        <outlet property="mapButton" destination="kAF-1G-Tqb" id="vBa-ge-GA9"/>
                         <outlet property="mapView" destination="kMb-BF-RuC" id="ej8-tN-4SH"/>
                         <outlet property="name" destination="9Qg-Zt-9ZG" id="92W-lG-SuY"/>
+                        <outlet property="place" destination="Rby-kg-tLS" id="jni-Bz-Nha"/>
                         <outlet property="scrollView" destination="PcQ-4M-CP0" id="X1d-c6-LbA"/>
                         <outlet property="statusBarMask" destination="8gl-Aa-fUT" id="hI4-J1-36k"/>
                         <outlet property="statusBarMaskHeight" destination="VJE-TA-xx8" id="8lE-ji-ZJV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqK-A2-DGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ENl-3n-fH7">
+                    <connections>
+                        <action selector="openInMapsPressed:" destination="N17-CL-mWA" id="cto-Cp-ZV2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="524" y="-160.11994002998503"/>
         </scene>
