@@ -29,6 +29,7 @@ class EventListController: UIViewController {
         self.tableView.register(cellType: LoadingCell.self)
         self.tableView.register(cellType: ErrorCell.self)
         self.tableView.register(cellType: EventListCell.self)
+        self.tableView.register(headerFooterViewType: EventListHeader.self)
 
         let refreshControl = UIRefreshControl()
         let title = NSLocalizedString("load_events_refresh_title", comment: "")
@@ -131,4 +132,10 @@ extension EventListController: UITableViewDelegate {
             self.performSegue(withIdentifier: "showEventDetail", sender: eventCell)
         }
     }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return tableView.dequeueReusableHeaderFooterView(EventListHeader.self)
+    }
+
+    
 }

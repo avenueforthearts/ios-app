@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GillSans.ttc">
+            <string>GillSans</string>
+            <string>GillSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EventListHeader" customModule="AvenueForTheArts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="32"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwE-c7-9LM">
+                    <rect key="frame" x="16" y="3" width="44.5" height="21"/>
+                    <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUt-TE-ux3">
+                    <rect key="frame" x="333.5" y="9" width="25.5" height="14"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXf-u2-6Bf" userLabel="Line">
+                    <rect key="frame" x="16" y="25" width="343" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="URY-oh-HTr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailingMargin" secondItem="KXf-u2-6Bf" secondAttribute="trailing" id="18h-KL-kUE"/>
+                <constraint firstItem="CUt-TE-ux3" firstAttribute="baseline" secondItem="KwE-c7-9LM" secondAttribute="baseline" id="RHQ-Q5-Jgp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="KXf-u2-6Bf" secondAttribute="bottom" constant="6" id="Z4J-Fn-THT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CUt-TE-ux3" secondAttribute="trailing" constant="16" id="jTs-fI-I8A"/>
+                <constraint firstItem="KXf-u2-6Bf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="rhI-tB-wCu"/>
+                <constraint firstItem="KwE-c7-9LM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="saN-Oh-jDU"/>
+                <constraint firstItem="KwE-c7-9LM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="3" id="z6A-8k-KU2"/>
+                <constraint firstItem="KXf-u2-6Bf" firstAttribute="top" secondItem="KwE-c7-9LM" secondAttribute="bottom" constant="1" id="zpG-n8-mxa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="dateLabel" destination="KwE-c7-9LM" id="Bet-N7-upy"/>
+                <outlet property="timeLabel" destination="CUt-TE-ux3" id="vQm-ga-EGD"/>
+            </connections>
+            <point key="canvasLocation" x="79.5" y="-137"/>
+        </view>
+    </objects>
+</document>

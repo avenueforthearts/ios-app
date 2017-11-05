@@ -43,6 +43,8 @@
 		DB2655FE1FAE46850099F5DB /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2655FD1FAE46850099F5DB /* MapController.swift */; };
 		DB3827361FAE5C900022F914 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3827351FAE5C900022F914 /* TabBarController.swift */; };
 		DB3827381FAE6AE10022F914 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3827371FAE6AE10022F914 /* UIView+Constraints.swift */; };
+		DB38273A1FAE9B970022F914 /* EventListHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3827391FAE9B970022F914 /* EventListHeader.xib */; };
+		DB38273C1FAE9BA90022F914 /* EventListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB38273B1FAE9BA90022F914 /* EventListHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +91,8 @@
 		DB2655FD1FAE46850099F5DB /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		DB3827351FAE5C900022F914 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DB3827371FAE6AE10022F914 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		DB3827391FAE9B970022F914 /* EventListHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventListHeader.xib; sourceTree = "<group>"; };
+		DB38273B1FAE9BA90022F914 /* EventListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,8 @@
 			children = (
 				316AE1021FAE33230013260D /* EventListCell.swift */,
 				316AE11E1FAE38070013260D /* EventListCell.xib */,
+				DB3827391FAE9B970022F914 /* EventListHeader.xib */,
+				DB38273B1FAE9BA90022F914 /* EventListHeader.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 				033604B11FAAA98E00A0E500 /* Assets.xcassets in Resources */,
 				316AE0FF1FAE2EB50013260D /* EventListController.storyboard in Resources */,
 				033604BC1FAAAB3700A0E500 /* Podfile in Resources */,
+				DB38273A1FAE9B970022F914 /* EventListHeader.xib in Resources */,
 				033604AF1FAAA98E00A0E500 /* Main.storyboard in Resources */,
 				316AE1291FAE756A0013260D /* AppIcon.xcassets in Resources */,
 			);
@@ -453,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A5CFAE1FAD556F0050FD37 /* API.swift in Sources */,
+				DB38273C1FAE9BA90022F914 /* EventListHeader.swift in Sources */,
 				316AE1121FAE33B40013260D /* NibOwnerLoadable.swift in Sources */,
 				31A5CFB31FAD69040050FD37 /* Endpoints.swift in Sources */,
 				DB3827381FAE6AE10022F914 /* UIView+Constraints.swift in Sources */,
