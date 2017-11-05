@@ -14,6 +14,7 @@ class EventDetailController: UIViewController {
     @IBOutlet private weak var statusBarMask: UIView!
     @IBOutlet private weak var statusBarMaskHeight: NSLayoutConstraint!
 
+
     var event: API.Models.Event!
 
     override func viewDidLoad() {
@@ -73,6 +74,28 @@ class EventDetailController: UIViewController {
     override func viewSafeAreaInsetsDidChange() {
         super.viewSafeAreaInsetsDidChange()
         self.statusBarMaskHeight.constant = self.view.safeAreaInsets.top
+    }
+}
+
+extension EventDetailController {
+    @IBAction private func addCalendarPressed(_ sender: UIButton) {
+
+    }
+
+    @IBAction private func openFacebookPressed(_ sender: UIButton) {
+        if let link = URL(string: "http://www.codingexplorer.com/") {
+            UIApplication.shared.open(link)
+        }
+    }
+
+    @IBAction private func sharePressed(_ sender: UIButton) {
+        let title = "Swift is awesome!  Check out this website about it!"
+
+        if let link = URL(string: "http://www.codingexplorer.com/") {
+            let activityVC = UIActivityViewController(activityItems: [title, link], applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = sender
+            self.present(activityVC, animated: true, completion: nil)
+        }
     }
 }
 

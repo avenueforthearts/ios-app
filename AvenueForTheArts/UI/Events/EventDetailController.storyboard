@@ -105,6 +105,9 @@
                                                         <state key="normal" title="Add" image="calendar">
                                                             <color key="titleColor" red="0.69019607839999997" green="0.21176470589999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="addCalendarPressed:" destination="N17-CL-mWA" eventType="touchUpInside" id="lfo-fv-IEH"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWZ-zD-91O">
                                                         <rect key="frame" x="119.5" y="0.0" width="104" height="54"/>
@@ -114,6 +117,9 @@
                                                         <state key="normal" title="Visit" image="facebook">
                                                             <color key="titleColor" red="0.23338985443115234" green="0.35096284747123718" blue="0.59996175765991211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="openFacebookPressed:" destination="N17-CL-mWA" eventType="touchUpInside" id="JHw-7Z-yPV"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEo-Pc-Hsx">
                                                         <rect key="frame" x="239.5" y="0.0" width="103.5" height="54"/>
@@ -123,6 +129,9 @@
                                                         <state key="normal" title="Share" image="share-action">
                                                             <color key="titleColor" red="0.69019607839999997" green="0.21176470589999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="sharePressed:" destination="N17-CL-mWA" eventType="touchUpInside" id="iVk-5W-TDa"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
