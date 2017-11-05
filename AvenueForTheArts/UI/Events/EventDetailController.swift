@@ -48,7 +48,6 @@ class EventDetailController: UIViewController {
         self.statusBarMask.layer.shadowRadius = 4
         self.statusBarMask.layer.shadowColor = UIColor.darkGray.cgColor
         self.statusBarMask.layer.shadowOpacity = 1
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         self.dates.text = String(prettyDateRange: self.event)
@@ -56,11 +55,10 @@ class EventDetailController: UIViewController {
 
         self.name.text = self.event.name
         self.descriptionView.text = self.event.description
-        if let url = self.event.cover {
-            self.banner.isHidden = false
-            self.banner.af_setImage(withURL: url)
+        if let link = event.cover {
+            self.banner.af_setImage(withURL: link, placeholderImage: #imageLiteral(resourceName: "placeholder_image"))
         } else {
-            self.banner.isHidden = true
+            self.banner.image = #imageLiteral(resourceName: "placeholder_image")
         }
 
         self.place.text = self.event.placeName

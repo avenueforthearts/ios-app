@@ -66,4 +66,17 @@ struct EventGrouping {
     let today: [Events]
     let tomorrow: [Events]
     let upcoming: [Events]
+
+    subscript(indexPath: IndexPath) -> Events? {
+        switch (indexPath.section, indexPath.row) {
+        case (0, let index):
+            return self.today[index]
+        case (1, let index):
+            return self.tomorrow[index]
+        case (2, let index):
+            return self.upcoming[index]
+        default:
+            return nil
+        }
+    }
 }

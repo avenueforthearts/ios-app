@@ -8,7 +8,6 @@ class EventListController: UIViewController {
         case error
     }
 
-
     private lazy var bag = DisposeBag()
     private lazy var loadingBag = DisposeBag()
     private let state = Variable<State>(.ready)
@@ -20,7 +19,7 @@ class EventListController: UIViewController {
                 let cell = sender as? UITableViewCell,
                 let indexPath = self.tableView.indexPath(for: cell)
             else { return }
-//            destination.event = events[indexPath.row]
+            destination.event = events[indexPath]
         }
     }
 
@@ -31,16 +30,6 @@ class EventListController: UIViewController {
         self.tableView.register(cellType: ErrorCell.self)
         self.tableView.register(cellType: EventListCell.self)
         self.tableView.register(headerFooterViewType: EventListHeader.self)
-
-        let refreshControl = UIRefreshControl()
-        let title = NSLocalizedString("load_events_refresh_title", comment: "")
-        refreshControl.attributedTitle = NSAttributedString(string: title)
-        refreshControl.addTarget(
-            self,
-            action: #selector(self.reloadTriggered(_:)),
-            for: .valueChanged
-        )
-        self.tableView.refreshControl = refreshControl
 
         self.state
             .asObservable()
@@ -121,7 +110,7 @@ extension EventListController: UITableViewDataSource {
             fatalError("Attempted to dequeue a cell while in the loading state")
         case .loaded(let eventsGroup):
             let cell = tableView.dequeueReusableCell(for: indexPath) as EventListCell
-//            cell.setup(event: events[indexPath.row])
+            cell.setup(event: eventsGroup[indexPath]!)
             return cell
         case .error:
             let cell = tableView.dequeueReusableCell(for: indexPath) as ErrorCell
@@ -136,6 +125,11 @@ extension EventListController: UITableViewDataSource {
         }
     }
 
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(EventListHeader.self)!
+        header.setup(date: "Today", time: "Novemer 5")
+        return header
+    }
 }
 
 extension EventListController: UITableViewDelegate {
@@ -146,9 +140,7 @@ extension EventListController: UITableViewDelegate {
         }
     }
 
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return tableView.dequeueReusableHeaderFooterView(EventListHeader.self)
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 44
     }
-
-    
 }
