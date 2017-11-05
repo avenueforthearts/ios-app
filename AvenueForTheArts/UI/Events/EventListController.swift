@@ -4,9 +4,10 @@ class EventListController: UIViewController {
     enum State {
         case ready
         case loading
-        case loaded([API.Models.Event])
+        case loaded(EventGrouping)
         case error
     }
+
 
     private lazy var bag = DisposeBag()
     private lazy var loadingBag = DisposeBag()
@@ -19,7 +20,7 @@ class EventListController: UIViewController {
                 let cell = sender as? UITableViewCell,
                 let indexPath = self.tableView.indexPath(for: cell)
             else { return }
-            destination.event = events[indexPath.row]
+//            destination.event = events[indexPath.row]
         }
     }
 
@@ -86,14 +87,26 @@ class EventListController: UIViewController {
 
 extension EventListController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 3
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch self.state.value {
         case .ready, .loading:
             return 0
-        case .loaded(let events):
+        case .loaded(let eventGrouping):
+            let events: [API.Models.Event]
+            switch section {
+            case 0:
+                events = eventGrouping.today
+            case 1:
+                events = eventGrouping.tomorrow
+            case 2:
+                events = eventGrouping.upcoming
+            default:
+                events = []
+            }
+
             return events.count
         case .error:
             return 1
@@ -106,9 +119,9 @@ extension EventListController: UITableViewDataSource {
             fatalError("Attempted to dequeue a cell while in the ready state")
         case .loading:
             fatalError("Attempted to dequeue a cell while in the loading state")
-        case .loaded(let events):
+        case .loaded(let eventsGroup):
             let cell = tableView.dequeueReusableCell(for: indexPath) as EventListCell
-            cell.setup(event: events[indexPath.row])
+//            cell.setup(event: events[indexPath.row])
             return cell
         case .error:
             let cell = tableView.dequeueReusableCell(for: indexPath) as ErrorCell
