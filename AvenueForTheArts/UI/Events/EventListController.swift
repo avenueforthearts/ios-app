@@ -1,6 +1,12 @@
 import RxSwift
 
 class EventListController: UIViewController {
+    static let dayFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM d"
+        return formatter
+    }()
+
     enum State {
         case ready
         case loading
@@ -127,7 +133,25 @@ extension EventListController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(EventListHeader.self)!
-        header.setup(date: "Today", time: "Novemer 5")
+        let title: String
+        let time: String
+        if section == 0 {
+            title = NSLocalizedString("Today", comment: "")
+            time = EventListController.dayFormatter.string(from: Date())
+        } else if section == 1 {
+            title = NSLocalizedString("Tomorrow", comment: "")
+            if let date = Calendar.current.date(byAdding: .day, value: 1, to: Date()) {
+                time = EventListController.dayFormatter.string(from: date)
+            } else {
+                time = ""
+            }
+
+        } else {
+            title = NSLocalizedString("Upcoming", comment: "")
+            time = ""
+        }
+
+        header.setup(date: title, time: time)
         return header
     }
 }
