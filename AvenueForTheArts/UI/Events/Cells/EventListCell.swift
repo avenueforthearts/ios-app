@@ -17,7 +17,7 @@ class EventListCell: UITableViewCell, NibReusable {
     func setup(event: API.Models.Event) {
         self.eventName.text = event.name
         self.eventDescription.text = event.description
-        self.place.text = event.place.name
+        self.place.text = event.placeName
         self.startTime.text = EventListCell.formatter.string(from: event.startDate)
         if let end = event.endDate {
             self.endTime.text = EventListCell.formatter.string(from: end)

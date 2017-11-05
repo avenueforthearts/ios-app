@@ -9,6 +9,5 @@ class EventStore {
             .map { (_, data) in
                 return try API.decoder.decode(API.Endpoints.Events.Response.self, from: data)
             }
-            .map { return $0.data }
     }
 }

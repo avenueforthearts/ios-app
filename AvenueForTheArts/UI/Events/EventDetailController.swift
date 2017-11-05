@@ -29,7 +29,7 @@ class EventDetailController: UIViewController {
 
         self.name.text = self.event.name
         self.descriptionView.text = self.event.description
-        if let string = self.event.cover?.source, let url = URL(string: string) {
+        if let url = self.event.cover {
             self.banner.isHidden = false
             self.banner.af_setImage(withURL: url)
         } else {
@@ -37,7 +37,7 @@ class EventDetailController: UIViewController {
         }
 
         let span = MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015)
-        if let lat = self.event.place.location?.latitude, let long = self.event.place.location?.longitude {
+        if let lat = self.event.latitude, let long = self.event.longitude {
             let location = CLLocation(latitude: Double(lat), longitude: Double(long))
 
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
@@ -54,7 +54,7 @@ class EventDetailController: UIViewController {
             })
 
         } else {
-            CLGeocoder().geocodeAddressString(self.event.place.name, completionHandler: { (placemarks, error) in
+            CLGeocoder().geocodeAddressString(self.event.placeName, completionHandler: { (placemarks, error) in
                 guard error == nil, let center = placemarks?.first?.location else {
                     self.mapView.isHidden = true
                     return

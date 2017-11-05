@@ -5,7 +5,7 @@ import RxAlamofire
 
 extension API {
     private static var host: String {
-        return "http://10.152.191.53:1234"
+        return "https://avenue-for-the-arts-backend.herokuapp.com"
     }
 
     class Endpoints {
@@ -15,7 +15,7 @@ extension API {
             var path: String {
                 switch self {
                 case .events:
-                    return "/events.json"
+                    return "/events/"
                 }
             }
 
@@ -28,7 +28,7 @@ extension API {
 
             var url: URL {
                 let string = "\(API.host)\(self.path)"
-                return URL(string: string)!
+                return URL(string: "https://avenue-for-the-arts-backend.herokuapp.com/events")!
             }
 
             func asURLRequest() throws -> URLRequest {
@@ -39,10 +39,12 @@ extension API {
                     "Accept": "application/json",
                 ]
 
-                switch self {
-                case .events(let request):
-                    urlRequest.httpBody = try? API.encoder.encode(request)
-                }
+                urlRequest.timeoutInterval = 10
+
+//                switch self {
+//                case .events(let request):
+//                    urlRequest.httpBody = try? API.encoder.encode(request)
+//                }
 
                 return urlRequest
             }
