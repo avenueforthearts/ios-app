@@ -47,8 +47,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsA-eT-Qr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarItem title="Venues" image="site" selectedImage="locataion" id="wg8-Tm-wkZ"/>
             </objects>
             <point key="canvasLocation" x="-234" y="116"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="locataion" width="10" height="10"/>
+        <image name="site" width="28" height="28"/>
+    </resources>
 </document>

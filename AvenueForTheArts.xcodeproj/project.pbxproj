@@ -45,6 +45,8 @@
 		A8A5A52D9BBF6EAC46EE4F46 /* Pods_AvenueForTheArts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28BD268B54951870B37F1A8 /* Pods_AvenueForTheArts.framework */; };
 		DB2655FC1FAE46750099F5DB /* MapController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2655FB1FAE46750099F5DB /* MapController.storyboard */; };
 		DB2655FE1FAE46850099F5DB /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2655FD1FAE46850099F5DB /* MapController.swift */; };
+		DB2E1FC91FAF9141000D9B8E /* InfoController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2E1FC81FAF9141000D9B8E /* InfoController.storyboard */; };
+		DB2E1FCB1FAF914B000D9B8E /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2E1FCA1FAF914B000D9B8E /* InfoController.swift */; };
 		DB3827361FAE5C900022F914 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3827351FAE5C900022F914 /* TabBarController.swift */; };
 		DB3827381FAE6AE10022F914 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3827371FAE6AE10022F914 /* UIView+Constraints.swift */; };
 		DB38273A1FAE9B970022F914 /* EventListHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3827391FAE9B970022F914 /* EventListHeader.xib */; };
@@ -97,6 +99,8 @@
 		D28BD268B54951870B37F1A8 /* Pods_AvenueForTheArts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AvenueForTheArts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2655FB1FAE46750099F5DB /* MapController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapController.storyboard; sourceTree = "<group>"; };
 		DB2655FD1FAE46850099F5DB /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		DB2E1FC81FAF9141000D9B8E /* InfoController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoController.storyboard; sourceTree = "<group>"; };
+		DB2E1FCA1FAF914B000D9B8E /* InfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
 		DB3827351FAE5C900022F914 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DB3827371FAE6AE10022F914 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		DB3827391FAE9B970022F914 /* EventListHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventListHeader.xib; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 		316AE0F71FAE26530013260D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DB2E1FC71FAF912B000D9B8E /* Info */,
 				DB2655FA1FAE3FF10099F5DB /* Map */,
 				316AE1041FAE335C0013260D /* Common */,
 				316AE1001FAE32FA0013260D /* Events */,
@@ -295,6 +300,15 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		DB2E1FC71FAF912B000D9B8E /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				DB2E1FC81FAF9141000D9B8E /* InfoController.storyboard */,
+				DB2E1FCA1FAF914B000D9B8E /* InfoController.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,6 +388,7 @@
 				DB2655FC1FAE46750099F5DB /* MapController.storyboard in Resources */,
 				316AE0F91FAE26650013260D /* EventDetailController.storyboard in Resources */,
 				316A891E1FAEA291009E1BDA /* ButtonShapes.xcassets in Resources */,
+				DB2E1FC91FAF9141000D9B8E /* InfoController.storyboard in Resources */,
 				316AE11F1FAE38070013260D /* EventListCell.xib in Resources */,
 				314DC4FB1FAF6C720078BD81 /* Info.plist in Resources */,
 				316AE1241FAE3E520013260D /* Localizable.strings in Resources */,
@@ -486,6 +501,7 @@
 				DB2655FE1FAE46850099F5DB /* MapController.swift in Sources */,
 				31A5CFAC1FAD55630050FD37 /* Event.swift in Sources */,
 				31A5CFB51FAD69340050FD37 /* Events.swift in Sources */,
+				DB2E1FCB1FAF914B000D9B8E /* InfoController.swift in Sources */,
 				316AE0FD1FAE2E800013260D /* EventDetailController.swift in Sources */,
 				316AE0FB1FAE2E100013260D /* EventListController.swift in Sources */,
 				DB3827361FAE5C900022F914 /* TabBarController.swift in Sources */,
