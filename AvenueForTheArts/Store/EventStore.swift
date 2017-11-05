@@ -22,8 +22,8 @@ class EventStore {
         var upcoming = [Events]()
 
         let calendar = Calendar.current
-        let startOfToday = calendar.startOfDay(for: Date())
-        let startOfTomorrow = calendar.startOfDay(
+        let todayStart = calendar.startOfDay(for: Date())
+        let tomorrowStart = calendar.startOfDay(
             for: calendar.date(byAdding: .day, value: 1, to: calendar.startOfDay(for: Date()))!
         )
         var startDateBegin: Date
@@ -40,9 +40,9 @@ class EventStore {
                 // now get 11:59:59 PM for the actual END day
                 endDateEnd = calendar.date(byAdding: .second, value: -1, to: endDateMidnight)!
 
-                if startOfToday > startDateBegin || startOfToday < endDateEnd {
+                if todayStart >= startDateBegin && todayStart < endDateEnd {
                     todayList.append(event)
-                } else if startOfTomorrow > startDateBegin || startOfTomorrow < endDateEnd {
+                } else if tomorrowStart >= startDateBegin && tomorrowStart < endDateEnd {
                     tomorrow.append(event)
                 } else {
                     upcoming.append(event)
