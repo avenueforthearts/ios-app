@@ -14,7 +14,6 @@
 		033604BC1FAAAB3700A0E500 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 033604BB1FAAAB3700A0E500 /* Podfile */; };
 		313794B81FAF5C88007E80F7 /* PrettyDateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313794B71FAF5C88007E80F7 /* PrettyDateRange.swift */; };
 		313794BA1FAF64ED007E80F7 /* CalendarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313794B91FAF64ED007E80F7 /* CalendarStore.swift */; };
-		314DC4FB1FAF6C720078BD81 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 314DC4FA1FAF6C720078BD81 /* Info.plist */; };
 		314DC4FC1FAF6C7A0078BD81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 314DC4FE1FAF6C7A0078BD81 /* InfoPlist.strings */; };
 		316A891E1FAEA291009E1BDA /* ButtonShapes.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 316A891D1FAEA291009E1BDA /* ButtonShapes.xcassets */; };
 		316AE0F61FAE1D9C0013260D /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AE0F51FAE1D9C0013260D /* EventStore.swift */; };
@@ -65,7 +64,6 @@
 		313794B91FAF64ED007E80F7 /* CalendarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStore.swift; sourceTree = "<group>"; };
 		314DC4FA1FAF6C720078BD81 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		314DC4FD1FAF6C7A0078BD81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		314DC4FF1FAF6C7B0078BD81 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		316A891D1FAEA291009E1BDA /* ButtonShapes.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ButtonShapes.xcassets; sourceTree = "<group>"; };
 		316AE0F51FAE1D9C0013260D /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
 		316AE0F81FAE26650013260D /* EventDetailController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventDetailController.storyboard; sourceTree = "<group>"; };
@@ -84,10 +82,7 @@
 		316AE1181FAE353B0013260D /* ErrorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorCell.xib; sourceTree = "<group>"; };
 		316AE11A1FAE35430013260D /* ErrorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCell.swift; sourceTree = "<group>"; };
 		316AE11E1FAE38070013260D /* EventListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventListCell.xib; sourceTree = "<group>"; };
-		316AE1201FAE3D7E0013260D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
-		316AE1211FAE3D7E0013260D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		316AE1251FAE3E520013260D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		316AE1271FAE3E5C0013260D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		316AE1281FAE756A0013260D /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		316AE12A1FAE802E0013260D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		31A5CFAB1FAD55630050FD37 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -364,7 +359,6 @@
 			knownRegions = (
 				en,
 				Base,
-				es,
 			);
 			mainGroup = 0336049D1FAAA98E00A0E500;
 			productRefGroup = 033604A71FAAA98E00A0E500 /* Products */;
@@ -390,7 +384,6 @@
 				316A891E1FAEA291009E1BDA /* ButtonShapes.xcassets in Resources */,
 				DB2E1FC91FAF9141000D9B8E /* InfoController.storyboard in Resources */,
 				316AE11F1FAE38070013260D /* EventListCell.xib in Resources */,
-				314DC4FB1FAF6C720078BD81 /* Info.plist in Resources */,
 				316AE1241FAE3E520013260D /* Localizable.strings in Resources */,
 				033604B11FAAA98E00A0E500 /* Assets.xcassets in Resources */,
 				316AE0FF1FAE2EB50013260D /* EventListController.storyboard in Resources */,
@@ -522,7 +515,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				033604AE1FAAA98E00A0E500 /* Base */,
-				316AE1201FAE3D7E0013260D /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -531,7 +523,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				033604B31FAAA98E00A0E500 /* Base */,
-				316AE1211FAE3D7E0013260D /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -540,7 +531,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				314DC4FD1FAF6C7A0078BD81 /* en */,
-				314DC4FF1FAF6C7B0078BD81 /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -549,7 +539,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				316AE1251FAE3E520013260D /* en */,
-				316AE1271FAE3E5C0013260D /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
