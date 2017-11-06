@@ -27,7 +27,7 @@ class EventListCell: UITableViewCell, NibReusable {
         self.card.layer.shadowOpacity = 0.3
     }
 
-    func setup(event: API.Models.Event) {
+    func setup(event: API.Models.Event, showDate: Bool = false) {
         if let link = event.cover {
             self.banner.af_setImage(withURL: link, placeholderImage: #imageLiteral(resourceName: "placeholder_image"))
         } else {
@@ -36,7 +36,11 @@ class EventListCell: UITableViewCell, NibReusable {
         self.eventName.text = event.name
         self.eventDescription.text = event.description
         self.place.text = event.placeName
-        self.time.text = EventListCell.formatter.string(from: event.startDate)
+        if showDate {
+            self.time.text = String(prettyDateRange: event)
+        } else {
+            self.time.text = PrettyDateRangeFormatters.time.string(from: event.startDate)
+        }
     }
 
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {

@@ -18,6 +18,14 @@ class EventListController: UIViewController {
     private lazy var loadingBag = DisposeBag()
     private let state = Variable<State>(.ready)
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var loadingView: UIView!
+    @IBOutlet private weak var failMessage: UILabel!
+    @IBOutlet private weak var retryButton: UIButton!
+    @IBOutlet private weak var loadingStack: UIStackView!
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EventDetailController, segue.identifier == "showEventDetail" {
@@ -32,8 +40,6 @@ class EventListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.register(cellType: LoadingCell.self)
-        self.tableView.register(cellType: ErrorCell.self)
         self.tableView.register(cellType: EventListCell.self)
         self.tableView.register(headerFooterViewType: EventListHeader.self)
 
@@ -48,6 +54,10 @@ class EventListController: UIViewController {
                     _self.state.value = .loading
                 case .loading:
                     _self.loadingBag = DisposeBag()
+                    _self.tableView.alpha = 0
+                    _self.loadingStack.isHidden = false
+                    _self.failMessage.isHidden = true
+                    _self.retryButton.isHidden = true
                     EventStore.get()
                         .map { events -> State in return .loaded(events) }
                         .catchError { error -> Observable<State> in
@@ -60,18 +70,28 @@ class EventListController: UIViewController {
                         )
                         .disposed(by: _self.loadingBag)
                 case .loaded(_):
-                    _self.tableView.refreshControl?.endRefreshing()
+                    UIView.animate(withDuration: 0.5, animations: {
+                        _self.tableView.alpha = 1
+                        _self.loadingStack.isHidden = false
+                        _self.failMessage.isHidden = true
+                        _self.retryButton.isHidden = true
+                    })
                 case .error:
-                    _self.tableView.refreshControl?.endRefreshing()
+                    _self.tableView.alpha = 0
+                    _self.loadingStack.isHidden = true
+                    _self.failMessage.isHidden = false
+                    _self.retryButton.isHidden = false
                 }
             })
             .disposed(by: self.bag)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.setNeedsStatusBarAppearanceUpdate()
+    }
+
     private func reloadContent(_ sender: Any? = nil) {
-        if sender != nil {
-            self.tableView.refreshControl?.beginRefreshing()
-        }
         self.state.value = .ready
     }
 
@@ -87,7 +107,7 @@ extension EventListController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch self.state.value {
-        case .ready, .loading:
+        case .ready, .loading, .error:
             return 0
         case .loaded(let eventGrouping):
             let events: [API.Models.Event]
@@ -103,8 +123,6 @@ extension EventListController: UITableViewDataSource {
             }
 
             return events.count
-        case .error:
-            return 1
         }
     }
 
@@ -116,18 +134,10 @@ extension EventListController: UITableViewDataSource {
             fatalError("Attempted to dequeue a cell while in the loading state")
         case .loaded(let eventsGroup):
             let cell = tableView.dequeueReusableCell(for: indexPath) as EventListCell
-            cell.setup(event: eventsGroup[indexPath]!)
+            cell.setup(event: eventsGroup[indexPath]!, showDate: indexPath.section >= 2)
             return cell
         case .error:
-            let cell = tableView.dequeueReusableCell(for: indexPath) as ErrorCell
-            cell.setup(
-                message: NSLocalizedString("load_events_error", comment: ""),
-                buttonTitle: NSLocalizedString("load_events_retry_title", comment: ""),
-                retry: { [weak self] in
-                    self?.reloadContent()
-                }
-            )
-            return cell
+            fatalError("Attempted to dequeue a cell while in the error state")
         }
     }
 

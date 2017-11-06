@@ -8,7 +8,7 @@
 
 "month_day_format" = "E, MMM d";
 "long_datetime_format" ="%1$@ at %2$@";
-"time_range_format" = "%1$@ - %2$@";
+"time_range_format" = "%1$@ – %2$@";
 
 "add_to_calendar_success_title" = "Success!";
 "add_to_calendar_success_message" = "\"%@\" was added to your calendar.";

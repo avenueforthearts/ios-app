@@ -48,6 +48,7 @@ class EventDetailController: UIViewController {
         self.statusBarMask.layer.shadowRadius = 4
         self.statusBarMask.layer.shadowColor = UIColor.darkGray.cgColor
         self.statusBarMask.layer.shadowOpacity = 1
+        self.statusBarMask.layer.shadowOffset = CGSize(width: 0, height: 1)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         self.dates.text = String(prettyDateRange: self.event)
@@ -88,6 +89,15 @@ class EventDetailController: UIViewController {
                 self.mapRegion = MKCoordinateRegion(center: center.coordinate, span: self.mapSpan)
             })
         }
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.setNeedsStatusBarAppearanceUpdate()
     }
 }
 
@@ -202,7 +212,7 @@ extension EventDetailController: UIScrollViewDelegate {
             self.bannerAspect.constant = 1.5 * y
         } else {
             self.bannerAspect.constant = 0
-            self.bannerTop.constant = -0.2 * y
+            self.bannerTop.constant = -0.3 * y
         }
     }
 }

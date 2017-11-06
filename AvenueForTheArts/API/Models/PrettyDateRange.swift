@@ -6,13 +6,13 @@ protocol PrettyDateRange {
 }
 
 class PrettyDateRangeFormatters {
-    fileprivate static let date: DateFormatter = {
+    static let date: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = NSLocalizedString("month_day_format", comment:"")
         return formatter
     }()
 
-    fileprivate static let time: DateFormatter = {
+    static let time: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .none
         formatter.timeStyle = .short

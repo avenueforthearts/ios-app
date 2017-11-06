@@ -54,7 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		033604A61FAAA98E00A0E500 /* AvenueForTheArts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvenueForTheArts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		033604A61FAAA98E00A0E500 /* Avenue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avenue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033604A91FAAA98E00A0E500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		033604AE1FAAA98E00A0E500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		033604B01FAAA98E00A0E500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		033604A71FAAA98E00A0E500 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				033604A61FAAA98E00A0E500 /* AvenueForTheArts.app */,
+				033604A61FAAA98E00A0E500 /* Avenue.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -330,7 +330,7 @@
 			);
 			name = AvenueForTheArts;
 			productName = AvenueForTheArts;
-			productReference = 033604A61FAAA98E00A0E500 /* AvenueForTheArts.app */;
+			productReference = 033604A61FAAA98E00A0E500 /* Avenue.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -677,7 +677,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dwellingplacegr.avenueforthearts;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Avenue;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -694,7 +694,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dwellingplacegr.avenueforthearts;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Avenue;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
