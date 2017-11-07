@@ -11,6 +11,7 @@ class EventListController: UIViewController {
         case ready
         case loading
         case loaded(EventGrouping)
+        case refreshing(EventGrouping)
         case error
     }
 
@@ -42,6 +43,9 @@ class EventListController: UIViewController {
 
         self.tableView.register(cellType: EventListCell.self)
         self.tableView.register(headerFooterViewType: EventListHeader.self)
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(self.reloadTriggered(_:)), for: .valueChanged)
+        self.tableView.refreshControl = refresh
 
         self.state
             .asObservable()
@@ -53,11 +57,13 @@ class EventListController: UIViewController {
                 case .ready:
                     _self.state.value = .loading
                 case .loading:
-                    _self.loadingBag = DisposeBag()
                     _self.tableView.alpha = 0
                     _self.loadingStack.isHidden = false
                     _self.failMessage.isHidden = true
                     _self.retryButton.isHidden = true
+                    fallthrough
+                case .refreshing(_):
+                    _self.loadingBag = DisposeBag()
                     EventStore.get()
                         .map { events -> State in return .loaded(events) }
                         .catchError { error -> Observable<State> in
@@ -70,6 +76,7 @@ class EventListController: UIViewController {
                         )
                         .disposed(by: _self.loadingBag)
                 case .loaded(_):
+                    self?.tableView.refreshControl?.endRefreshing()
                     UIView.animate(withDuration: 0.5, animations: {
                         _self.tableView.alpha = 1
                         _self.loadingStack.isHidden = false
@@ -92,11 +99,15 @@ class EventListController: UIViewController {
     }
 
     private func reloadContent(_ sender: Any? = nil) {
-        self.state.value = .ready
+        if sender is UIRefreshControl, case .loaded(let grouping) = self.state.value {
+            self.state.value = .refreshing(grouping)
+        } else {
+            self.state.value = .ready
+        }
     }
 
     @IBAction private func reloadTriggered(_ sender: UIControl) {
-        self.reloadContent()
+        self.reloadContent(sender)
     }
 }
 
@@ -109,15 +120,15 @@ extension EventListController: UITableViewDataSource {
         switch self.state.value {
         case .ready, .loading, .error:
             return 0
-        case .loaded(let eventGrouping):
+        case .loaded(let grouping), .refreshing(let grouping):
             let events: [API.Models.Event]
             switch section {
             case 0:
-                events = eventGrouping.today
+                events = grouping.today
             case 1:
-                events = eventGrouping.tomorrow
+                events = grouping.tomorrow
             case 2:
-                events = eventGrouping.upcoming
+                events = grouping.upcoming
             default:
                 events = []
             }
@@ -132,9 +143,9 @@ extension EventListController: UITableViewDataSource {
             fatalError("Attempted to dequeue a cell while in the ready state")
         case .loading:
             fatalError("Attempted to dequeue a cell while in the loading state")
-        case .loaded(let eventsGroup):
+        case .loaded(let grouping), .refreshing(let grouping):
             let cell = tableView.dequeueReusableCell(for: indexPath) as EventListCell
-            cell.setup(event: eventsGroup[indexPath]!, showDate: indexPath.section >= 2)
+            cell.setup(event: grouping[indexPath]!, showDate: indexPath.section >= 2)
             return cell
         case .error:
             fatalError("Attempted to dequeue a cell while in the error state")
