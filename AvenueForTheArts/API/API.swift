@@ -30,6 +30,11 @@ class API {
         )
         return decoder
     }()
+
+    static var hasInternetConnection: Bool {
+        guard let reach = NetworkReachabilityManager() else { return false }
+        return reach.isReachable
+    }
 }
 
 extension Reactive where Base: SessionManager {
