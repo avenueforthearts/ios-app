@@ -27,8 +27,7 @@ extension API {
             }
 
             var url: URL {
-                let string = "\(API.host)\(self.path)"
-                return URL(string: "https://avenue-for-the-arts-backend.herokuapp.com/events")!
+                return URL(string: "\(API.host)\(self.path)")!
             }
 
             func asURLRequest() throws -> URLRequest {
@@ -40,11 +39,14 @@ extension API {
                 ]
 
                 urlRequest.timeoutInterval = 10
+                if !API.hasInternetConnection {
+                    urlRequest.cachePolicy = .returnCacheDataDontLoad
+                    urlRequest.setValue(
+                        String(format: "max-stale=%d", INT32_MAX),
+                        forHTTPHeaderField: "Cache-Control"
+                    )
+                }
 
-//                switch self {
-//                case .events(let request):
-//                    urlRequest.httpBody = try? API.encoder.encode(request)
-//                }
 
                 return urlRequest
             }
